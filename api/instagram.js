@@ -1,17 +1,15 @@
 module.exports = async function handler(request, response) {
   const token = process.env.INSTAGRAM_ACCESS_TOKEN;
-  const userId = process.env.INSTAGRAM_USER_ID;
 
   response.setHeader("Content-Type", "application/json; charset=utf-8");
   response.setHeader("Cache-Control", "s-maxage=900, stale-while-revalidate=3600");
 
-  if (!token || !userId) {
+  if (!token) {
     response.status(200).json({ configured: false, items: [] });
     return;
   }
 
-  const version = process.env.INSTAGRAM_GRAPH_VERSION || "v21.0";
-  const url = new URL(`https://graph.facebook.com/${version}/${userId}/media`);
+  const url = new URL("https://graph.instagram.com/me/media");
   url.searchParams.set("fields", "id,caption,media_type,media_url,permalink,thumbnail_url,timestamp");
   url.searchParams.set("limit", "8");
   url.searchParams.set("access_token", token);
