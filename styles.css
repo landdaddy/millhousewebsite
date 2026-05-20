@@ -213,10 +213,11 @@ h3 {
 .sm-hero {
   position: relative;
   display: grid;
-  min-height: calc(100vh - 78px);
+  min-height: calc(100svh - 70px);
+  height: calc(100svh - 70px);
   padding: 0;
   overflow: hidden;
-  background: var(--ink);
+  background: var(--paper-soft);
   isolation: isolate;
 }
 
@@ -228,24 +229,24 @@ h3 {
   justify-items: center;
   gap: 1.35rem;
   width: min(calc(100% - 2rem), 920px);
-  min-height: calc(100vh - 78px);
+  min-height: calc(100svh - 70px);
   margin: 0 auto;
-  padding: clamp(5rem, 9vw, 8rem) 0 clamp(3.5rem, 7vw, 6rem);
+  padding: clamp(5rem, 9vw, 8rem) 0 clamp(2.5rem, 5vw, 4.5rem);
   text-align: center;
 }
 
 .sm-hero-copy .eyebrow {
   margin-bottom: 0;
-  color: rgba(255, 250, 242, .86);
+  color: rgba(49, 47, 42, .78);
 }
 
 .sm-hero-copy h1 {
   max-width: 15ch;
   margin: 0 auto;
-  color: var(--paper-soft);
+  color: var(--ink);
   font-size: clamp(2.65rem, 5.5vw, 6.2rem);
   line-height: .95;
-  text-shadow: 0 2px 26px rgba(0, 0, 0, .38);
+  text-shadow: 0 2px 24px rgba(255, 250, 242, .74);
 }
 
 .sm-hero-image {
@@ -265,18 +266,20 @@ h3 {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(20, 18, 14, .04), rgba(20, 18, 14, .34)),
-    linear-gradient(90deg, rgba(20, 18, 14, .16), rgba(20, 18, 14, .02) 48%, rgba(20, 18, 14, .16));
+    linear-gradient(180deg, rgba(255, 250, 242, .06), rgba(255, 250, 242, .52)),
+    linear-gradient(90deg, rgba(255, 250, 242, .16), rgba(255, 250, 242, .02) 48%, rgba(255, 250, 242, .2));
 }
 
 .sm-hero-image img {
   object-position: center center;
+  filter: sepia(.02) saturate(.96) contrast(.95) brightness(1.04);
 }
 
 .sm-hero .button {
-  border-color: rgba(255, 250, 242, .78);
-  background: rgba(255, 250, 242, .92);
+  border-color: rgba(49, 47, 42, .52);
+  background: rgba(255, 250, 242, .86);
   color: var(--ink);
+  backdrop-filter: blur(10px);
 }
 
 .sm-latest {
