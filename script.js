@@ -36,6 +36,33 @@ if ("IntersectionObserver" in window) {
   revealItems.forEach((item) => item.classList.add("is-visible"));
 }
 
+const heroCarousel = document.querySelector("[data-hero-carousel]");
+const heroAction = document.querySelector("[data-hero-action]");
+const heroDots = document.querySelectorAll(".sm-hero-dots button");
+if (heroCarousel && heroAction) {
+  const slides = Array.from(heroCarousel.querySelectorAll(".sm-hero-slide"));
+  let currentSlide = slides.findIndex((slide) => slide.classList.contains("is-active"));
+  if (currentSlide < 0) currentSlide = 0;
+
+  const showSlide = (index) => {
+    currentSlide = (index + slides.length) % slides.length;
+    slides.forEach((slide, slideIndex) => slide.classList.toggle("is-active", slideIndex === currentSlide));
+    heroDots.forEach((dot, dotIndex) => dot.classList.toggle("is-active", dotIndex === currentSlide));
+    const active = slides[currentSlide];
+    heroAction.textContent = active.dataset.buttonText || "Build";
+    heroAction.href = active.dataset.buttonLink || "contact.html";
+  };
+
+  let heroTimer = window.setInterval(() => showSlide(currentSlide + 1), 5000);
+  heroDots.forEach((dot, dotIndex) => {
+    dot.addEventListener("click", () => {
+      window.clearInterval(heroTimer);
+      showSlide(dotIndex);
+      heroTimer = window.setInterval(() => showSlide(currentSlide + 1), 5000);
+    });
+  });
+}
+
 const instagramFeeds = document.querySelectorAll("[data-instagram-feed]");
 const escapeHtml = (value = "") => value.replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
 const renderInstagramItems = (feed, items) => {
@@ -57,3 +84,10 @@ if (instagramFeeds.length) {
     .catch(() => {});
 }
 
+const instagramCarousels = document.querySelectorAll("[data-instagram-carousel]");
+instagramCarousels.forEach((feed) => {
+  window.setInterval(() => {
+    const cards = Array.from(feed.children);
+    if (cards.length > 1) feed.appendChild(cards[0]);
+  }, 4200);
+});

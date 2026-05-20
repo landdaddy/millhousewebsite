@@ -28,32 +28,60 @@
       <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false"><span></span><span></span></button>
       <div class="nav-links left"><a href="studio.html">Studio</a><a href="field-notes.html">Process</a><a href="journal.html">Journal</a></div>
       <a class="brand" href="index.html">Millhouse</a>
-      <div class="nav-links right"><a href="shop.html">Shop</a><a href="contact.html">Begin</a></div>
+      <div class="nav-links right"><a href="shop.html">Shop</a><a href="contact.html">Build</a></div>
       <div class="mobile-menu-panel" id="mobile-menu" hidden></div>
     </nav>
   </header>
 
   <main>
     <section class="sm-hero" aria-labelledby="home-hero-title">
-      <figure class="sm-hero-image" data-reveal>
-        <!-- Replace this file with your own hero photo when you are ready. -->
-        <img src="assets/millhouse-hero-patio.png" alt="An airy backyard table with a cream umbrella, lemons, striped linens, and a woman arranging place settings">
-      </figure>
-      <div class="sm-hero-copy" data-reveal>
-        <p class="eyebrow">Home, gathered softly</p>
-        <h1 id="home-hero-title">A home studio rooted in modern tradition</h1>
-        <a class="button" href="contact.html">Begin</a>
+      <div class="sm-hero-slides" data-hero-carousel>
+        <article class="sm-hero-slide is-active" data-button-text="Build" data-button-link="contact.html">
+          <img src="assets/millhouse-hero-patio.png" alt="An airy backyard table with a cream umbrella, lemons, striped linens, and a woman arranging place settings">
+          <div class="sm-hero-copy">
+            <p class="eyebrow">Home, gathered softly</p>
+            <h1 id="home-hero-title">A home studio rooted in modern tradition</h1>
+          </div>
+        </article>
+        <article class="sm-hero-slide" data-button-text="Read the guide" data-button-link="posts/what-goes-into-a-home.html">
+          <img src="assets/millhouse-hero-build-better.png" alt="A sunlit design table with plans, samples, striped linen, lemons, and ceramics">
+          <div class="sm-hero-copy">
+            <p class="eyebrow">How to build a better home</p>
+            <h2>Start with the quiet decisions.</h2>
+          </div>
+        </article>
+        <article class="sm-hero-slide" data-button-text="Read journal" data-button-link="journal.html">
+          <img src="assets/millhouse-hero-journal-table.png" alt="A layered breakfast nook with flowers, ceramics, stripes, and warm collected objects">
+          <div class="sm-hero-copy">
+            <p class="eyebrow">Design & lifestyle</p>
+            <h2>Rooms, recipes, rituals, and things worth keeping.</h2>
+          </div>
+        </article>
+        <article class="sm-hero-slide" data-button-text="Shop someday" data-button-link="shop.html">
+          <img src="assets/millhouse-hero-shop-objects.png" alt="A curated shelf and table with ceramics, framed art, striped napkins, brass, and lemons">
+          <div class="sm-hero-copy">
+            <p class="eyebrow">Found for home</p>
+            <h2>Little pieces with a long memory.</h2>
+          </div>
+        </article>
+      </div>
+      <a class="button sm-hero-action" href="contact.html" data-hero-action>Build</a>
+      <div class="sm-hero-dots" aria-label="Hero slides">
+        <button class="is-active" type="button" aria-label="Show build slide"></button>
+        <button type="button" aria-label="Show home guide slide"></button>
+        <button type="button" aria-label="Show journal slide"></button>
+        <button type="button" aria-label="Show shop slide"></button>
       </div>
     </section>
 
     <section class="sm-latest">
       <div class="sm-latest-wrap sm-section-inner">
         <div class="sm-latest-center" data-reveal>
-          <p class="eyebrow">A little lately</p>
+          <p class="eyebrow">Start here</p>
           <a href="posts/what-goes-into-a-home.html">
-            <h2>What goes into a home</h2>
-            <p>Field Note</p>
-            <span class="button">Read now</span>
+            <h2>How to build a better home</h2>
+            <p>Begin with proportion, daylight, storage, and the unglamorous details that make beauty hold.</p>
+            <span class="button">Read the note</span>
           </a>
         </div>
         <div class="sm-latest-minis" aria-label="Small Millhouse moments">
@@ -78,7 +106,7 @@
         </div>
         <div class="sm-read-list">
           <a href="posts/quiet-stripes.html" data-reveal>
-            <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=720&q=82" alt="Layered striped textiles in a calm room">
+            <img src="assets/millhouse-hero-shop-objects.png" alt="A collected table of ceramics, brass, stripes, flowers, and lemons">
             <strong>The case for quiet stripes</strong>
             <p>Where pattern sits softly and makes a room feel finished.</p>
             <span>Interior · May 2026</span>
@@ -90,7 +118,7 @@
             <span>Recipe · May 2026</span>
           </a>
           <a href="posts/choosing-warm-white.html" data-reveal>
-            <img src="https://images.unsplash.com/photo-1770988962875-1a9f50e56eb6?auto=format&fit=crop&w=720&q=80" alt="A soft room with warm white walls">
+            <img src="assets/millhouse-hero-patio.png" alt="An airy striped backyard table with lemons and wicker chairs">
             <strong>Choosing a warm white</strong>
             <p>A quiet guide to undertones, daylight, and trim.</p>
             <span>Interior · April 2026</span>
@@ -102,13 +130,13 @@
             <span>Kitchen · April 2026</span>
           </a>
           <a href="posts/desert-morning-table.html" data-reveal>
-            <img src="https://images.unsplash.com/photo-1753189198553-8a5d219a47d3?auto=format&fit=crop&w=720&q=80" alt="Flowers and candles arranged on a table">
+            <img src="assets/millhouse-hero-journal-table.png" alt="A layered breakfast nook with flowers, ceramics, stripes, and gathered objects">
             <strong>A desert morning table</strong>
             <p>Flowers, linen, candlelight, and a table that does not try too hard.</p>
             <span>Gathering · March 2026</span>
           </a>
           <a href="posts/what-goes-into-a-home.html" data-reveal>
-            <img src="https://images.unsplash.com/photo-1722411927625-0e478acf502b?auto=format&fit=crop&w=720&q=80" alt="A close view of woodworking in warm light">
+            <img src="assets/millhouse-hero-build-better.png" alt="A design table with plans, fabric samples, stripes, and lemons">
             <strong>The beautiful unglamorous parts</strong>
             <p>What is underneath the rooms that feel easy.</p>
             <span>Process · March 2026</span>
@@ -117,23 +145,24 @@
       </div>
     </section>
 
-    <section class="sm-about">
-      <div class="sm-about-wrap sm-section-inner">
-        <figure data-reveal>
-          <img src="https://images.unsplash.com/photo-1770988962875-1a9f50e56eb6?auto=format&fit=crop&w=1500&q=80" alt="A timeless dining room with old beams and warm walls">
-        </figure>
-        <div class="sm-about-copy" data-reveal>
-          <p class="eyebrow">New classic</p>
-          <h2>Rooms that feel collected, comfortable, and quietly finished.</h2>
-          <p>Millhouse begins with the feeling of home and works backward into the details: scale, light, materials, storage, hardware, and the small practical choices that make every day easier.</p>
-          <a class="button" href="studio.html">About Millhouse</a>
+    <section class="sm-about sm-studio-note">
+      <div class="sm-section-inner">
+        <div class="sm-note-card" data-reveal>
+          <p class="eyebrow">The Millhouse way</p>
+          <h2>Build the practical thing beautifully.</h2>
+          <p>We like rooms that feel easy because the hard decisions were handled early: the right window height, the drawer that catches the mess, the stone that can live a little, the stripe that keeps the table from feeling too perfect.</p>
+          <a class="text-button" href="studio.html">Studio</a>
+        </div>
+        <div class="sm-note-photos" data-reveal>
+          <figure><img src="assets/millhouse-hero-build-better.png" alt="Design table with plans, samples, stripes, and lemons"></figure>
+          <figure><img src="assets/millhouse-hero-shop-objects.png" alt="Curated home objects with ceramics, brass, stripes, and lemons"></figure>
         </div>
       </div>
     </section>
 
     <section class="sm-quote">
       <div class="sm-scroll-line" aria-hidden="true"></div>
-      <p data-reveal>Home should feel refined enough to hold a room, and relaxed enough to live in it.</p>
+      <p data-reveal><span>Home should feel</span> refined enough to hold a room, and relaxed enough to live in it.</p>
       <div class="sm-scroll-line bottom" aria-hidden="true"></div>
     </section>
 
@@ -146,24 +175,24 @@
           </div>
           <a class="text-button" href="field-notes.html">See process</a>
         </div>
-        <div class="sm-process-grid">
+        <div class="sm-process-grid sm-process-story">
           <a href="field-notes.html" data-reveal>
             <img src="https://images.unsplash.com/photo-1516455207990-7a41ce80f7ee?auto=format&fit=crop&w=900&q=82" alt="Open shelves with ceramics and useful objects">
             <p>01</p>
             <h3>Introduction</h3>
-            <span>We begin with availability, fit, land, early goals, and the feeling you are trying to make room for.</span>
+            <span>Availability, fit, land, early goals, and the feeling you are trying to make room for. Calm starts before drawings.</span>
           </a>
           <a href="field-notes.html" data-reveal>
             <img src="https://images.unsplash.com/photo-1722411927625-0e478acf502b?auto=format&fit=crop&w=900&q=80" alt="A quiet woodworking detail in warm light">
             <p>02</p>
             <h3>Design + plan</h3>
-            <span>Builder, architecture, interiors, drawings, selections, site conditions, pricing, and schedule become one shared map before the work asks for speed.</span>
+            <span>Builder, architecture, interiors, selections, site conditions, pricing, lending, and schedule become one shared map.</span>
           </a>
           <a href="contact.html" data-reveal>
             <img src="https://images.unsplash.com/photo-1762186541075-c9d28c5a7507?auto=format&fit=crop&w=900&q=82" alt="A warm kitchen table by an old window">
             <p>03</p>
             <h3>Build + deliver</h3>
-            <span>We keep the builder fee clear, move actual construction costs through transparently, and stay close through thresholds, touch-ups, handoffs, and the first quiet moment home.</span>
+            <span>Clear fees, transparent costs, touch-ups, thresholds, handoffs, and the first quiet moment when the house starts becoming yours.</span>
           </a>
         </div>
       </div>
@@ -213,7 +242,7 @@
           <h2 id="instagram-title">From the Millhouse feed.</h2>
           <a class="ghost-button" href="https://www.instagram.com/millhousebuilt/" target="_blank" rel="noopener">@millhousebuilt</a>
         </div>
-        <div class="instagram-feed" data-instagram-feed>
+        <div class="instagram-feed instagram-carousel" data-instagram-feed data-instagram-carousel>
           <a class="instagram-card tall" href="https://www.instagram.com/millhousebuilt/" target="_blank" rel="noopener"><img src="https://images.unsplash.com/photo-1762186541075-c9d28c5a7507?auto=format&fit=crop&w=700&q=78" alt="Rustic kitchen table by a window"><span>Good light at the table</span></a>
           <a class="instagram-card" href="https://www.instagram.com/millhousebuilt/" target="_blank" rel="noopener"><img src="https://images.unsplash.com/photo-1753189198553-8a5d219a47d3?auto=format&fit=crop&w=700&q=78" alt="Flowers and candles on a small table"><span>Flowers, candles, almost done</span></a>
           <a class="instagram-card" href="https://www.instagram.com/millhousebuilt/" target="_blank" rel="noopener"><img src="https://images.unsplash.com/photo-1722411927625-0e478acf502b?auto=format&fit=crop&w=700&q=78" alt="Woodworker shaping wood in a workshop"><span>Quiet work by hand</span></a>
@@ -227,7 +256,7 @@
     <div class="footer-grid">
       <div>
         <h2>MILLHOUSE</h2>
-        <p>Soft structure for homes with a pulse.</p>
+        <p>A Family Company</p>
       </div>
       <nav aria-label="Footer pages">
         <a href="studio.html">Studio</a>
@@ -244,6 +273,6 @@
     </div>
     <small>&copy; 2026 Millhouse. All rights reserved.</small>
   </footer>
-  <script src="script.js"></script>
+  <script src="script.js?v=20260519-carousel"></script>
 </body>
 </html>
