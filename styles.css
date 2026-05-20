@@ -1435,7 +1435,7 @@ textarea {
   grid-template-columns: 58px minmax(150px, .42fr) 1fr;
   gap: 1.25rem;
   align-items: baseline;
-  padding: 1.25rem 0;
+  padding: 1.55rem 0;
   border-bottom: 1px solid var(--rule);
 }
 
@@ -1484,7 +1484,7 @@ textarea {
 }
 
 .sm-shop-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(1.5rem, 3vw, 2.2rem);
   border: 0;
   background: transparent;
@@ -1523,9 +1523,40 @@ textarea {
 .sm-shop-grid p {
   margin-top: .3rem;
   color: #87909a;
-  font-size: .82rem;
+  font-size: .86rem;
   letter-spacing: 0;
   text-transform: none;
+}
+
+.instagram-link {
+  gap: .55rem;
+}
+
+.instagram-link span {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+}
+
+.instagram-link span:before {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+}
+
+.instagram-link span:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: currentColor;
 }
 
 .instagram-section {
@@ -1540,6 +1571,18 @@ textarea {
 
 .instagram-carousel .instagram-card {
   min-height: 210px;
+}
+
+.instagram-carousel .instagram-card:nth-child(2n) {
+  transform: translateY(18px) rotate(-.7deg);
+}
+
+.instagram-carousel .instagram-card:nth-child(3n) {
+  transform: translateY(-12px) rotate(.5deg);
+}
+
+.instagram-carousel .instagram-card:nth-child(4n) {
+  transform: translateY(8px);
 }
 
 .instagram-carousel .instagram-card img {
@@ -1593,7 +1636,7 @@ textarea {
   }
 
   .sm-shop-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -1639,9 +1682,50 @@ textarea {
     grid-auto-rows: 260px;
   }
 
-  .sm-shop-grid,
+  .sm-process {
+    padding-top: 3.35rem;
+    padding-bottom: 3.45rem;
+  }
+
+  .sm-process-intro {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1.35rem;
+  }
+
+  .sm-process-intro h2 {
+    max-width: 13ch;
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+
   .sm-process-list article {
     grid-template-columns: 1fr;
+    gap: .42rem;
+    padding: 1.05rem 0;
+  }
+
+  .sm-process-editorial figure {
+    display: none;
+  }
+
+  .sm-process-list span {
+    font-size: .62rem;
+  }
+
+  .sm-process-list h3 {
+    font-size: 1.45rem;
+  }
+
+  .sm-read-list a:nth-child(n + 4) {
+    display: none;
+  }
+
+  .sm-shop-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .instagram-carousel .instagram-card:nth-child(n) {
+    transform: none;
   }
 
   .sm-process-list p {
