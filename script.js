@@ -39,6 +39,8 @@ if ("IntersectionObserver" in window) {
 const heroCarousel = document.querySelector("[data-hero-carousel]");
 const heroAction = document.querySelector("[data-hero-action]");
 const heroDots = document.querySelectorAll(".sm-hero-dots button");
+const heroPrev = document.querySelector("[data-hero-prev]");
+const heroNext = document.querySelector("[data-hero-next]");
 if (heroCarousel && heroAction) {
   const slides = Array.from(heroCarousel.querySelectorAll(".sm-hero-slide"));
   let currentSlide = slides.findIndex((slide) => slide.classList.contains("is-active"));
@@ -60,6 +62,16 @@ if (heroCarousel && heroAction) {
       showSlide(dotIndex);
       heroTimer = window.setInterval(() => showSlide(currentSlide + 1), 5000);
     });
+  });
+  heroPrev?.addEventListener("click", () => {
+    window.clearInterval(heroTimer);
+    showSlide(currentSlide - 1);
+    heroTimer = window.setInterval(() => showSlide(currentSlide + 1), 5000);
+  });
+  heroNext?.addEventListener("click", () => {
+    window.clearInterval(heroTimer);
+    showSlide(currentSlide + 1);
+    heroTimer = window.setInterval(() => showSlide(currentSlide + 1), 5000);
   });
 }
 
