@@ -1585,7 +1585,9 @@ textarea {
 }
 
 .home-page .sm-latest {
-  background: #fbfaf6;
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 250, 242, .72) 0 1px, transparent 1px 30px),
+    linear-gradient(135deg, #fbfaf6 0%, #efe3d2 100%);
   border-bottom: 1px solid var(--rule);
 }
 
@@ -1600,10 +1602,14 @@ textarea {
   grid-column: 1;
   margin: 0;
   overflow: hidden;
-  aspect-ratio: 1 / 1.08;
+  aspect-ratio: .92 / 1;
   border: 1px solid rgba(49, 47, 42, .13);
   background: #f4eadc;
   padding: .45rem;
+}
+
+.sm-latest-image img {
+  object-position: center;
 }
 
 .sm-latest-center {
