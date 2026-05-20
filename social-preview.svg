@@ -1,13 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">MILLHOUSE</title>
-  <desc id="desc">A warm neutral Millhouse social preview with refined serif wordmark and editorial home photography.</desc>
-  <rect width="1200" height="630" fill="#f7f1e8"/>
-  <path d="M75 347h441" stroke="#a9977c" stroke-width="2"/>
-  <text x="72" y="334" fill="#1f313d" font-family="New York, Georgia, serif" font-size="92" letter-spacing="1">MILLHOUSE</text>
-  <text x="74" y="414" fill="#2b2f2c" font-family="New York, Georgia, serif" font-size="34" font-style="italic">A Family Company</text>
-  <text x="74" y="456" fill="#6f675b" font-family="Avenir, Helvetica, sans-serif" font-size="22">Intimate design &amp; build for homes with feeling.</text>
-  <circle cx="123" cy="531" r="45" fill="none" stroke="#a9977c" stroke-width="2"/>
-  <text x="123" y="548" text-anchor="middle" fill="#1f313d" font-family="New York, Georgia, serif" font-size="54">M</text>
-  <text x="204" y="540" fill="#6f675b" font-family="Avenir, Helvetica, sans-serif" font-size="16" letter-spacing="3">DESIGN / BUILD / DETAILS</text>
-  <rect x="635" y="55" width="505" height="520" fill="#d8cdb9" stroke="#c6b79d" stroke-width="2"/>
+  <desc id="desc">A simple Millhouse social preview with editorial home photography and an elegant wordmark.</desc>
+  <rect width="1200" height="630" fill="#d8cdb9"/>
+  <text x="506" y="190" text-anchor="middle" fill="#fffaf2" font-family="New York, Georgia, serif" font-size="110" letter-spacing="3">MILLHOUSE</text>
 </svg>
