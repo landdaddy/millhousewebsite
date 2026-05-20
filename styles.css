@@ -1717,20 +1717,20 @@ textarea {
 }
 
 .sm-quote {
-  background: #eadfce;
+  background: #e3d7c3;
   color: var(--ink);
 }
 
 .sm-quote p {
-  max-width: 900px;
-  font-size: clamp(2rem, 3.7vw, 4.25rem);
-  line-height: 1.04;
+  max-width: 860px;
+  font-size: clamp(1.9rem, 3.45vw, 3.95rem);
+  line-height: 1.08;
 }
 
 .sm-quote p span {
   display: block;
-  margin-bottom: .45rem;
-  color: var(--muted);
+  margin-bottom: .65rem;
+  color: #665d51;
   font-family: var(--sans);
   font-size: clamp(.82rem, 1.2vw, 1rem);
   letter-spacing: .22em;
