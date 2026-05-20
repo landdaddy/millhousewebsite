@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Millhouse</title>
+  <rect width="512" height="512" rx="72" fill="#fffaf2"/>
+  <rect x="31" y="31" width="450" height="450" rx="58" fill="none" stroke="#a9977c" stroke-width="14"/>
+  <rect x="64" y="300" width="384" height="118" rx="28" fill="#e8decc"/>
+  <text x="256" y="260" text-anchor="middle" fill="#1f313d" font-family="New York, Georgia, serif" font-size="286">M</text>
+  <path d="M178 350h156" stroke="#a9977c" stroke-width="8" stroke-linecap="round"/>
+</svg>
