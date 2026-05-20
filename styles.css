@@ -436,3 +436,69 @@ body.home-page {
   }
 }
 
+
+/* studio-mcgee-hero-match-2026-05-19 */
+.home-page .sm-hero-studio {
+  padding-top: clamp(5.75rem, 9vw, 9.25rem);
+  background: #f7f1e8;
+}
+
+.home-page .sm-hero-studio .sm-hero-copy {
+  width: min(calc(100% - 2rem), 1120px);
+  margin-bottom: clamp(3rem, 5.6vw, 5.75rem);
+}
+
+.home-page .sm-hero-studio h1 {
+  max-width: 12.2ch;
+  font-size: clamp(4.45rem, 9.6vw, 11.8rem);
+  line-height: .91;
+  color: #34342e;
+}
+
+.home-page .sm-hero-studio .sm-hero-image {
+  width: min(calc(100% - clamp(2rem, 6vw, 6.5rem)), 1460px);
+  height: min(68vh, 720px);
+  min-height: 500px;
+  background: #ded4c2;
+}
+
+.home-page .sm-hero-studio .sm-hero-image img {
+  object-position: center 52%;
+}
+
+@media (max-width: 980px) {
+  .home-page .sm-hero-studio {
+    padding-top: clamp(4rem, 8vw, 6rem);
+  }
+
+  .home-page .sm-hero-studio .sm-hero-copy {
+    text-align: center;
+  }
+
+  .home-page .sm-hero-studio h1 {
+    margin-right: auto;
+    margin-left: auto;
+    font-size: clamp(4rem, 13vw, 8rem);
+  }
+}
+
+@media (max-width: 620px) {
+  .home-page .sm-hero-studio {
+    padding-top: 3.75rem;
+  }
+
+  .home-page .sm-hero-studio .sm-hero-copy {
+    margin-bottom: 2.4rem;
+  }
+
+  .home-page .sm-hero-studio h1 {
+    font-size: clamp(3.45rem, 15.5vw, 5.5rem);
+    line-height: .94;
+  }
+
+  .home-page .sm-hero-studio .sm-hero-image {
+    width: calc(100% - 2rem);
+    min-height: 390px;
+    height: 58vh;
+  }
+}
