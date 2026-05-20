@@ -831,17 +831,20 @@ h3 {
   z-index: 2;
   display: grid;
   justify-items: start;
-  gap: .82rem;
-  width: min(590px, calc(100% - 3.5rem));
-  padding: 0;
+  gap: .8rem;
+  width: min(560px, calc(100% - 3.5rem));
+  padding: clamp(1.25rem, 2.5vw, 2rem);
+  border: 1px solid rgba(255, 250, 242, .32);
+  background: rgba(35, 31, 25, .22);
+  backdrop-filter: blur(12px);
 }
 
 .build-hero-copy h1 {
   max-width: 15ch;
   color: #fffaf2;
-  font-size: clamp(2.05rem, 3.4vw, 4.05rem);
+  font-size: clamp(2rem, 3vw, 3.6rem);
   line-height: 1.1;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, .22);
+  text-shadow: 0 2px 16px rgba(0, 0, 0, .28);
 }
 
 .build-hero-copy p:not(.eyebrow) {
@@ -995,9 +998,15 @@ h3 {
   background: #fbf7ef;
 }
 
+.build-path-grid {
+  grid-template-columns: minmax(280px, .58fr) minmax(0, 1.42fr);
+  gap: clamp(2.5rem, 7vw, 7rem);
+}
+
 .build-path-note {
   position: sticky;
   top: 108px;
+  padding: clamp(1.6rem, 3vw, 2.4rem);
 }
 
 .build-steps {
@@ -1007,15 +1016,39 @@ h3 {
 
 .build-steps article {
   display: grid;
-  grid-template-columns: 88px minmax(150px, .48fr) 1fr;
-  gap: 1.25rem;
-  align-items: baseline;
-  padding: 1.45rem 0;
+  grid-template-columns: 94px minmax(190px, .46fr) minmax(260px, 1fr);
+  gap: clamp(1.25rem, 3vw, 2.8rem);
+  align-items: start;
+  padding: clamp(1.8rem, 3vw, 2.45rem) 0;
   border-bottom: 1px solid var(--rule);
 }
 
-.build-form-section {
-  background: #fbfaf6;
+.build-consultation {
+  background: #f4eadc;
+}
+
+.build-consultation-inner {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  max-width: 840px;
+  text-align: center;
+}
+
+.build-consultation-inner h2 {
+  max-width: 12ch;
+  font-size: clamp(2.4rem, 4.6vw, 5rem);
+}
+
+.build-consultation-inner p:not(.eyebrow) {
+  max-width: 44rem;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.25vw, 1.16rem);
+  line-height: 1.8;
+}
+
+.build-consultation-inner .button {
+  margin-top: .8rem;
 }
 
 label {
@@ -2146,6 +2179,7 @@ textarea {
     bottom: 1.25rem;
     gap: .72rem;
     width: calc(100% - 2.2rem);
+    padding: 1rem;
   }
 
   .build-hero-copy h1 {
