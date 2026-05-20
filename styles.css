@@ -785,22 +785,55 @@ h3 {
 }
 
 .build-hero {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1.04fr) minmax(360px, .96fr);
   min-height: calc(100svh - 70px);
-  background: #efe6d8;
+  overflow: hidden;
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 250, 242, .24) 0 1px, transparent 1px 34px),
+    linear-gradient(135deg, #f1e7d8 0%, #e5d8c4 100%);
+}
+
+.build-hero:before {
+  content: "";
+  position: absolute;
+  inset: clamp(1rem, 2vw, 1.5rem);
+  z-index: 0;
+  border: 1px solid rgba(255, 250, 242, .62);
+  pointer-events: none;
+}
+
+.build-hero:after {
+  content: "";
+  position: absolute;
+  right: clamp(1rem, 4vw, 4rem);
+  top: clamp(1rem, 5vw, 5rem);
+  width: min(220px, 24vw);
+  aspect-ratio: 1 / 1;
+  z-index: 0;
+  border: 1px solid rgba(49, 47, 42, .12);
+  border-radius: 50%;
+  opacity: .55;
+  pointer-events: none;
 }
 
 .build-hero figure {
+  position: relative;
+  z-index: 1;
   min-height: 520px;
   margin: 0;
+  padding: clamp(1rem, 2vw, 1.5rem) 0 clamp(1rem, 2vw, 1.5rem) clamp(1rem, 2vw, 1.5rem);
 }
 
 .build-hero figure img {
   object-position: center;
+  border: 1px solid rgba(255, 250, 242, .72);
 }
 
 .build-hero-copy {
+  position: relative;
+  z-index: 1;
   display: grid;
   align-content: center;
   justify-items: start;
@@ -818,6 +851,12 @@ h3 {
   color: var(--muted);
   font-size: clamp(1.04rem, 1.35vw, 1.2rem);
   line-height: 1.8;
+}
+
+.build-hero-note {
+  padding: .95rem 0 .95rem 1rem;
+  border-left: 1px solid rgba(49, 47, 42, .22);
+  font-family: var(--serif);
 }
 
 .build-hero-actions {
@@ -1929,6 +1968,7 @@ textarea {
   .build-hero figure {
     min-height: 420px;
     order: 2;
+    padding: 0 1rem 1rem;
   }
 
   .build-hero-copy {
