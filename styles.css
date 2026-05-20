@@ -789,7 +789,7 @@ h3 {
   min-height: calc(100svh - 70px);
   overflow: hidden;
   background:
-    repeating-linear-gradient(90deg, rgba(255, 250, 242, .24) 0 1px, transparent 1px 34px),
+    repeating-linear-gradient(90deg, rgba(255, 250, 242, .28) 0 1px, transparent 1px 34px),
     linear-gradient(135deg, #f1e7d8 0%, #e5d8c4 100%);
 }
 
@@ -820,44 +820,66 @@ h3 {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(24, 22, 18, .44), rgba(24, 22, 18, .12) 52%, rgba(24, 22, 18, .2)),
-    linear-gradient(180deg, rgba(24, 22, 18, .05), rgba(24, 22, 18, .26));
+    linear-gradient(90deg, rgba(24, 22, 18, .38), rgba(24, 22, 18, .08) 48%, rgba(24, 22, 18, .18)),
+    linear-gradient(180deg, rgba(24, 22, 18, .03), rgba(24, 22, 18, .24));
 }
 
 .build-hero-copy {
   position: absolute;
-  left: clamp(1.35rem, 4vw, 5.4rem);
-  bottom: clamp(2.6rem, 6vh, 5.2rem);
+  left: clamp(1.75rem, 5vw, 6.5rem);
+  bottom: clamp(3rem, 7vh, 6.1rem);
   z-index: 2;
   display: grid;
   justify-items: start;
-  gap: .95rem;
-  width: min(680px, calc(100% - 2.7rem));
+  gap: .82rem;
+  width: min(590px, calc(100% - 3.5rem));
   padding: 0;
 }
 
 .build-hero-copy h1 {
   max-width: 15ch;
   color: #fffaf2;
-  font-size: clamp(2.35rem, 4.1vw, 4.9rem);
-  line-height: 1.08;
+  font-size: clamp(2.05rem, 3.4vw, 4.05rem);
+  line-height: 1.1;
   text-shadow: 0 2px 18px rgba(0, 0, 0, .22);
 }
 
 .build-hero-copy p:not(.eyebrow) {
-  max-width: 34rem;
+  max-width: 29rem;
   color: rgba(255, 250, 242, .86);
-  font-size: clamp(1.04rem, 1.35vw, 1.2rem);
+  font-size: clamp(.98rem, 1.1vw, 1.08rem);
   line-height: 1.7;
 }
 
 .build-hero-copy .eyebrow {
   color: rgba(255, 250, 242, .86);
+  margin-bottom: .25rem;
+}
+
+.build-hero-ribbon {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .48rem;
+  margin-top: .18rem;
+}
+
+.build-hero-ribbon span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.9rem;
+  padding: .38rem .64rem;
+  border: 1px solid rgba(255, 250, 242, .45);
+  background: rgba(255, 250, 242, .08);
+  color: rgba(255, 250, 242, .9);
+  font-size: .6rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
 }
 
 .build-hero-note {
-  max-width: 36rem;
-  padding: .85rem 0 0;
+  max-width: 31rem;
+  padding: .78rem 0 0;
   border-top: 1px solid rgba(255, 250, 242, .44);
   font-family: var(--serif);
 }
@@ -866,7 +888,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: .8rem;
-  margin-top: .8rem;
+  margin-top: .55rem;
 }
 
 .build-hero-actions .button {
@@ -2121,24 +2143,59 @@ textarea {
 
   .build-hero-copy {
     left: 1.1rem;
-    bottom: 1.5rem;
-    gap: .8rem;
+    bottom: 1.25rem;
+    gap: .72rem;
     width: calc(100% - 2.2rem);
   }
 
   .build-hero-copy h1 {
-    font-size: clamp(2.35rem, 10vw, 3.8rem);
+    max-width: 12ch;
+    font-size: clamp(2.15rem, 9.2vw, 3.25rem);
+  }
+
+  .build-hero-copy > p:not(.eyebrow):not(.build-hero-note) {
+    display: none;
+  }
+
+  .build-hero-note {
+    max-width: 18rem;
+    padding-top: .7rem;
+    font-size: .98rem;
+    line-height: 1.45;
+  }
+
+  .build-hero-ribbon {
+    display: none;
   }
 
   .build-hero-actions {
-    display: grid;
+    display: flex;
+    align-items: center;
+    gap: .65rem;
     width: 100%;
   }
 
-  .build-hero-actions .button,
-  .build-hero-actions .ghost-button {
-    width: 100%;
+  .build-hero-actions .button {
+    flex: 1 1 auto;
     justify-content: center;
+  }
+
+  .build-hero-actions .ghost-button {
+    flex: 0 0 auto;
+    min-height: 38px;
+    padding: .56rem .68rem;
+    border-color: rgba(255, 250, 242, .52);
+    font-size: .56rem;
+  }
+
+  .build-hero-actions .ghost-button[href^="tel"] {
+    font-size: 0;
+  }
+
+  .build-hero-actions .ghost-button[href^="tel"]::after {
+    content: "Call";
+    font-size: .56rem;
+    letter-spacing: .12em;
   }
 
   .build-option {
