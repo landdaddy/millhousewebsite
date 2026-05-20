@@ -1272,35 +1272,71 @@ textarea {
 }
 
 .home-page .sm-latest-wrap {
-  grid-template-columns: minmax(280px, .78fr) minmax(280px, .72fr) minmax(190px, .34fr);
+  grid-template-columns: minmax(260px, .72fr) minmax(300px, .82fr) minmax(170px, .34fr);
+  align-items: end;
 }
 
 .sm-latest-image {
   grid-column: 1;
   margin: 0;
   overflow: hidden;
-  aspect-ratio: 1.18 / 1;
+  aspect-ratio: .94 / 1;
+  border: 1px solid rgba(49, 47, 42, .13);
+  background: #fffaf2;
+  padding: .5rem;
 }
 
 .sm-latest-center {
   grid-column: 2;
-  padding: clamp(2rem, 4vw, 4rem) clamp(1rem, 3vw, 2rem);
+  display: grid;
+  justify-items: start;
+  gap: clamp(.9rem, 1.6vw, 1.25rem);
+  padding: clamp(1.5rem, 3vw, 2.75rem) clamp(1rem, 3vw, 2rem);
   text-align: left;
 }
 
 .sm-latest-center h2 {
-  max-width: 13ch;
+  max-width: 12ch;
   margin: 0;
-  font-size: clamp(2.2rem, 3.8vw, 4rem);
+  font-size: clamp(2.15rem, 3.2vw, 3.55rem);
+  line-height: 1;
 }
 
-.sm-latest-center p:not(.eyebrow) {
+.sm-latest-text {
+  display: grid;
+  gap: .85rem;
   max-width: 34rem;
+}
+
+.sm-latest-center .sm-latest-text p {
+  color: var(--muted);
+  font-size: clamp(1rem, 1.15vw, 1.12rem);
   line-height: 1.75;
 }
 
-.sm-latest-center a {
-  justify-items: start;
+.sm-latest-center .text-button {
+  display: inline-flex;
+  justify-items: normal;
+}
+
+.sm-latest-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem;
+  margin-top: .1rem;
+}
+
+.sm-latest-tags span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.1rem;
+  padding: .45rem .78rem;
+  border: 1px solid rgba(49, 47, 42, .16);
+  background: rgba(255, 250, 242, .64);
+  color: var(--blue);
+  font-size: .66rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
 }
 
 .sm-latest-note {
@@ -1308,8 +1344,8 @@ textarea {
   padding-bottom: clamp(2rem, 5vw, 4rem);
   color: var(--muted);
   font-family: var(--serif);
-  font-size: clamp(1.35rem, 2vw, 2rem);
-  line-height: 1.14;
+  font-size: clamp(1.2rem, 1.8vw, 1.72rem);
+  line-height: 1.18;
 }
 
 .sm-read-list img {
