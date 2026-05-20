@@ -2975,3 +2975,232 @@ textarea {
     text-align: left;
   }
 }
+
+/* process-page-redesign-2026-05-20 */
+.process-page {
+  --process-paper: #fbf8f1;
+  --process-cream: #fffdf8;
+  --process-warm: #e9decc;
+  --process-oak: #b49368;
+  --process-ink: #302f2a;
+  background: var(--process-paper);
+}
+
+.process-page .site-header {
+  background: rgba(251, 248, 241, .96);
+}
+
+.process-hero {
+  padding: clamp(3.4rem, 6.5vw, 6rem) clamp(1rem, 5vw, 4.5rem);
+  background:
+    repeating-linear-gradient(90deg, rgba(180, 147, 104, .10) 0 1px, transparent 1px 36px),
+    var(--process-paper);
+  border-bottom: 1px solid rgba(49, 47, 42, .12);
+}
+
+.process-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(290px, .72fr) minmax(340px, .86fr);
+  gap: clamp(2rem, 7vw, 7rem);
+  align-items: center;
+}
+
+.process-hero-copy {
+  display: grid;
+  justify-items: start;
+}
+
+.process-hero-copy h1 {
+  max-width: 11.5ch;
+  font-size: clamp(2.65rem, 5.2vw, 5.8rem);
+}
+
+.process-hero-copy p:not(.eyebrow) {
+  max-width: 34rem;
+  margin: 1.25rem 0 1.8rem;
+  color: #665d52;
+  font-size: clamp(1rem, 1.22vw, 1.15rem);
+  line-height: 1.82;
+}
+
+.process-hero-photo {
+  position: relative;
+  aspect-ratio: 1.26 / 1;
+  margin: 0;
+  overflow: hidden;
+  background: var(--process-warm);
+}
+
+.process-hero-photo::after {
+  content: "";
+  position: absolute;
+  inset: clamp(.75rem, 1.25vw, 1.05rem);
+  border: 1px solid rgba(255, 253, 248, .72);
+  pointer-events: none;
+}
+
+.process-overview {
+  padding: clamp(3.5rem, 7vw, 6.5rem) clamp(1rem, 5vw, 4.5rem);
+  background: var(--process-cream);
+}
+
+.process-overview-grid {
+  display: grid;
+  grid-template-columns: minmax(270px, .46fr) minmax(0, .92fr);
+  gap: clamp(2rem, 6vw, 5.5rem);
+  align-items: start;
+}
+
+.process-overview-card {
+  position: sticky;
+  top: 104px;
+  padding: clamp(1.35rem, 2.4vw, 2rem);
+  background:
+    linear-gradient(180deg, rgba(251, 248, 241, .94), rgba(251, 248, 241, .74)),
+    var(--process-paper);
+  border: 1px solid rgba(49, 47, 42, .14);
+}
+
+.process-overview-card h2 {
+  max-width: 11ch;
+  font-size: clamp(2rem, 3.7vw, 4.25rem);
+}
+
+.process-overview-card p:not(.eyebrow) {
+  margin-top: 1.15rem;
+  color: #665d52;
+  line-height: 1.78;
+}
+
+.process-steps-redesign {
+  gap: 0;
+  border-top: 1px solid rgba(49, 47, 42, .14);
+}
+
+.process-steps-redesign .process-step {
+  grid-template-columns: 76px 1fr;
+  gap: clamp(1rem, 2.4vw, 2rem);
+  padding: clamp(1.25rem, 2.6vw, 2.15rem) 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(49, 47, 42, .14);
+}
+
+.process-steps-redesign .process-step span {
+  color: var(--process-oak);
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.process-steps-redesign .process-step h3 {
+  font-size: clamp(1.75rem, 2.7vw, 3rem);
+}
+
+.process-steps-redesign .process-step p {
+  max-width: 42rem;
+  margin-top: .35rem;
+  color: #665d52;
+  line-height: 1.76;
+}
+
+.process-quote {
+  padding: clamp(3.4rem, 6vw, 5.5rem) clamp(1rem, 5vw, 4.5rem);
+  background:
+    linear-gradient(90deg, rgba(48, 47, 42, .72), rgba(48, 47, 42, .36)),
+    url("assets/millhouse-hero-shop-objects.png");
+  background-size: cover;
+  background-position: center;
+  color: var(--cream);
+}
+
+.process-quote p {
+  max-width: 21ch;
+  font-family: var(--serif);
+  font-size: clamp(2.1rem, 4.7vw, 5.25rem);
+  line-height: 1.04;
+}
+
+.process-faq-section {
+  padding: clamp(3.5rem, 7vw, 6.5rem) clamp(1rem, 5vw, 4.5rem);
+  background:
+    repeating-linear-gradient(0deg, rgba(180, 147, 104, .07) 0 1px, transparent 1px 30px),
+    #f5eee3;
+}
+
+.process-faq-shell {
+  display: grid;
+  grid-template-columns: minmax(260px, .42fr) minmax(0, .92fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: start;
+}
+
+.process-faq-heading {
+  position: sticky;
+  top: 104px;
+}
+
+.process-faq-heading h2 {
+  max-width: 11ch;
+  font-size: clamp(2rem, 3.7vw, 4.2rem);
+}
+
+.process-faq-list {
+  gap: .55rem;
+}
+
+.process-faq-list details {
+  background: rgba(255, 253, 248, .66);
+  border: 1px solid rgba(49, 47, 42, .13);
+}
+
+.process-faq-list summary {
+  color: var(--process-ink);
+  font-size: clamp(1.15rem, 1.65vw, 1.55rem);
+}
+
+.process-faq-list p {
+  color: #665d52;
+  line-height: 1.74;
+}
+
+@media (max-width: 900px) {
+  .process-hero-grid,
+  .process-overview-grid,
+  .process-faq-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .process-overview-card,
+  .process-faq-heading {
+    position: static;
+  }
+
+  .process-hero-photo {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (max-width: 620px) {
+  .process-hero,
+  .process-overview,
+  .process-quote,
+  .process-faq-section {
+    padding-inline: 1rem;
+  }
+
+  .process-hero-copy h1 {
+    font-size: clamp(2.3rem, 11vw, 3.6rem);
+  }
+
+  .process-steps-redesign .process-step {
+    grid-template-columns: 1fr;
+    gap: .45rem;
+  }
+
+  .process-steps-redesign .process-step span {
+    font-size: 1.4rem;
+  }
+
+  .process-quote p {
+    font-size: clamp(2rem, 10vw, 3.2rem);
+  }
+}
