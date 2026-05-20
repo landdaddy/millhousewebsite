@@ -78,7 +78,7 @@ if (heroCarousel && heroAction) {
 const instagramFeeds = document.querySelectorAll("[data-instagram-feed]");
 const escapeHtml = (value = "") => value.replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
 const renderInstagramItems = (feed, items) => {
-  feed.innerHTML = items.slice(0, 6).map((item, index) => {
+  feed.innerHTML = items.slice(0, 5).map((item, index) => {
     const image = item.thumbnail_url || item.media_url;
     const label = item.caption ? item.caption.split("\n")[0].slice(0, 54) : "From the Millhouse feed";
     const shape = index === 0 ? " tall" : index === 3 ? " wide" : "";

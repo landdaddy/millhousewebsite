@@ -11,7 +11,7 @@ module.exports = async function handler(request, response) {
 
   const url = new URL("https://graph.instagram.com/me/media");
   url.searchParams.set("fields", "id,caption,media_type,media_url,permalink,thumbnail_url,timestamp");
-  url.searchParams.set("limit", "8");
+  url.searchParams.set("limit", "5");
   url.searchParams.set("access_token", token);
 
   try {
