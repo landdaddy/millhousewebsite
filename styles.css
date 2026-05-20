@@ -149,9 +149,9 @@ h3 {
 
 .brand {
   font-family: var(--serif);
-  font-size: clamp(1.9rem, 3.8vw, 3.3rem);
+  font-size: clamp(1.55rem, 2.8vw, 2.55rem);
   font-weight: 400;
-  letter-spacing: .18em;
+  letter-spacing: .32em;
   line-height: .95;
   text-transform: uppercase;
 }
@@ -234,6 +234,11 @@ h3 {
   text-align: center;
 }
 
+.sm-hero-copy .eyebrow {
+  margin-bottom: 0;
+  color: rgba(255, 250, 242, .86);
+}
+
 .sm-hero-copy h1 {
   max-width: 15ch;
   margin: 0 auto;
@@ -275,14 +280,22 @@ h3 {
 }
 
 .sm-latest {
-  padding: clamp(3.3rem, 6vw, 5rem) 1rem clamp(5rem, 9vw, 8rem);
+  padding: clamp(2.4rem, 5vw, 4rem) 0 clamp(4.2rem, 8vw, 7rem);
   background: var(--paper);
   text-align: center;
 }
 
+.sm-latest-wrap {
+  display: grid;
+  grid-template-columns: minmax(190px, .38fr) minmax(0, 1fr) minmax(190px, .38fr);
+  gap: clamp(1rem, 4vw, 4rem);
+  align-items: center;
+}
+
 .sm-latest-center {
-  width: min(100%, 720px);
+  width: min(100%, 620px);
   margin: 0 auto;
+  grid-column: 2;
 }
 
 .sm-latest-center a {
@@ -303,6 +316,34 @@ h3 {
 
 .sm-latest-center .button {
   margin-top: .9rem;
+}
+
+.sm-latest-minis {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.sm-latest-minis figure {
+  width: min(230px, 18vw);
+  aspect-ratio: .82 / 1;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+  background: var(--cream);
+  padding: .45rem;
+}
+
+.sm-latest-minis img {
+  filter: sepia(.04) saturate(.88) contrast(.96) brightness(1.04);
+}
+
+.sm-latest-minis figure:last-child {
+  justify-self: end;
+  transform: translateY(2.5rem);
 }
 
 .sm-read,
@@ -336,16 +377,22 @@ h3 {
 
 .sm-read-list a {
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto auto 1fr auto;
   align-items: start;
-  min-height: 265px;
-  padding: clamp(1.3rem, 2.2vw, 2rem);
+  min-height: 0;
+  padding: clamp(1rem, 1.8vw, 1.45rem);
   border-right: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
 }
 
 .sm-read-list img {
-  display: none;
+  display: block;
+  aspect-ratio: 4 / 3.25;
+  height: auto;
+  margin-bottom: 1.15rem;
+  border: 1px solid rgba(49, 47, 42, .12);
+  padding: .35rem;
+  background: var(--cream);
 }
 
 .sm-read-list strong {
@@ -418,18 +465,55 @@ h3 {
 }
 
 .sm-quote {
+  position: relative;
   padding: clamp(5rem, 9vw, 9rem) clamp(1rem, 5vw, 4.5rem);
-  background: var(--blue);
-  color: var(--paper-soft);
+  overflow: hidden;
+  background: #efe6d8;
+  color: var(--ink);
   text-align: center;
 }
 
 .sm-quote p {
-  max-width: 980px;
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
   margin: 0 auto;
   font-family: var(--serif);
   font-size: clamp(2.3rem, 4.6vw, 5.2rem);
   line-height: 1.04;
+}
+
+.sm-scroll-line {
+  position: relative;
+  z-index: 1;
+  width: min(260px, 52vw);
+  height: 34px;
+  margin: 0 auto clamp(1.8rem, 4vw, 3rem);
+  border-top: 1px solid rgba(49, 47, 42, .32);
+}
+
+.sm-scroll-line:before,
+.sm-scroll-line:after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid rgba(49, 47, 42, .32);
+  border-radius: 50%;
+}
+
+.sm-scroll-line:before {
+  left: calc(50% - 28px);
+}
+
+.sm-scroll-line:after {
+  right: calc(50% - 28px);
+}
+
+.sm-scroll-line.bottom {
+  margin: clamp(1.8rem, 4vw, 3rem) auto 0;
+  transform: rotate(180deg);
 }
 
 .sm-process {
@@ -444,7 +528,7 @@ h3 {
 
 .sm-process-grid a {
   display: grid;
-  gap: .85rem;
+  gap: .8rem;
 }
 
 .sm-process-grid img {
@@ -456,12 +540,20 @@ h3 {
   color: var(--muted);
   font-size: .68rem;
   letter-spacing: .18em;
+  text-transform: uppercase;
 }
 
 .sm-process-grid h3 {
   max-width: 11ch;
   color: var(--ink);
   font-size: clamp(1.45rem, 2.1vw, 2.35rem);
+}
+
+.sm-process-grid span {
+  max-width: 30rem;
+  color: var(--muted);
+  font-size: .98rem;
+  line-height: 1.72;
 }
 
 .sm-shop {
@@ -471,13 +563,52 @@ h3 {
 
 .sm-shop-wrap {
   display: grid;
-  grid-template-columns: minmax(310px, .72fr) minmax(360px, 1fr);
-  gap: clamp(2.5rem, 6vw, 6rem);
-  align-items: center;
+  grid-template-columns: minmax(260px, .46fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: start;
 }
 
-.sm-shop figure {
-  aspect-ratio: 1.24 / 1;
+.sm-shop-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--rule);
+  border-left: 1px solid var(--rule);
+}
+
+.sm-shop-grid a {
+  display: grid;
+  align-content: start;
+  gap: .55rem;
+  min-height: 100%;
+  padding: clamp(.9rem, 1.6vw, 1.35rem);
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  background: rgba(255, 250, 242, .26);
+}
+
+.sm-shop-grid img {
+  aspect-ratio: 1 / 1.08;
+  height: auto;
+  margin-bottom: .55rem;
+  background: var(--cream);
+}
+
+.sm-shop-grid p {
+  color: var(--muted);
+  font-size: .62rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.sm-shop-grid h3 {
+  font-size: clamp(1.25rem, 1.8vw, 1.85rem);
+  line-height: 1.06;
+}
+
+.sm-shop-grid span {
+  color: var(--muted);
+  font-size: .88rem;
+  line-height: 1.55;
 }
 
 .page-hero .section-inner,
@@ -821,8 +952,8 @@ textarea {
     grid-column: 2;
     grid-row: 1;
     justify-self: center;
-    font-size: 2rem;
-    letter-spacing: .14em;
+    font-size: 1.65rem;
+    letter-spacing: .24em;
   }
 
   .nav-links {
@@ -876,6 +1007,25 @@ textarea {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .sm-latest-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .sm-latest-center,
+  .sm-latest-minis {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .sm-latest-minis {
+    max-width: 520px;
+    margin: 2rem auto 0;
+  }
+
+  .sm-latest-minis figure {
+    width: min(210px, 42vw);
+  }
+
   .sm-about-wrap,
   .sm-shop-wrap,
   .page-hero .section-inner,
@@ -890,8 +1040,9 @@ textarea {
   }
 
   .sm-process-grid,
+  .sm-shop-grid,
   .cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .sm-process-grid img {
@@ -956,7 +1107,7 @@ textarea {
   }
 
   .sm-quote p {
-    font-size: clamp(3rem, 13vw, 4.9rem);
+    font-size: clamp(2.2rem, 10vw, 3.75rem);
   }
 
   .process-step {
@@ -971,5 +1122,11 @@ textarea {
   .instagram-card span {
     font-size: .56rem;
     letter-spacing: .09em;
+  }
+
+  .sm-process-grid,
+  .sm-shop-grid,
+  .cards {
+    grid-template-columns: 1fr;
   }
 }
