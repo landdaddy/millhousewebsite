@@ -143,6 +143,41 @@ h3 {
   text-transform: uppercase;
 }
 
+.nav-links a {
+  position: relative;
+  display: inline-block;
+  padding-bottom: .28rem;
+  transition: color 220ms ease, opacity 220ms ease, transform 220ms ease, letter-spacing 220ms ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: .16em;
+  bottom: 0;
+  height: 1px;
+  background: currentColor;
+  opacity: .34;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 260ms ease, opacity 260ms ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: var(--ink);
+  opacity: .72;
+  letter-spacing: .19em;
+  transform: translateY(-1px);
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus-visible::after {
+  opacity: .42;
+  transform: scaleX(1);
+}
+
 .nav-links.right {
   justify-content: flex-end;
 }
@@ -3045,64 +3080,16 @@ textarea {
   pointer-events: none;
 }
 
-.process-material-band {
-  padding: clamp(2rem, 4.5vw, 4rem) clamp(1rem, 5vw, 4.5rem);
-  background: #efe4d2;
-}
-
-.process-material-grid {
-  display: grid;
-  grid-template-columns: minmax(300px, .88fr) minmax(240px, .4fr);
-  gap: clamp(1.25rem, 4vw, 3.5rem);
-  align-items: stretch;
-}
-
-.process-material-grid figure {
-  min-height: clamp(250px, 34vw, 430px);
-  margin: 0;
-  overflow: hidden;
-  background: var(--process-warm);
-}
-
-.process-material-grid figure img {
-  object-position: 58% 73%;
-}
-
-.process-material-note {
-  display: grid;
-  align-content: center;
-  gap: .85rem;
-  padding: clamp(1.2rem, 2.5vw, 2rem);
-  background:
-    linear-gradient(180deg, rgba(255, 250, 241, .74), rgba(255, 250, 241, .46)),
-    rgba(255, 250, 241, .36);
-  border: 1px solid rgba(74, 61, 49, .14);
-}
-
-.process-material-note span {
-  display: block;
-  padding: .95rem 0;
-  border-bottom: 1px solid rgba(74, 61, 49, .16);
-  color: var(--process-deep);
-  font-family: var(--serif);
-  font-size: clamp(1.65rem, 2.5vw, 2.7rem);
-  line-height: 1;
-}
-
-.process-material-note span:last-child {
-  border-bottom: 0;
-}
-
 .process-overview {
-  padding: clamp(4rem, 7.5vw, 7rem) clamp(1rem, 5vw, 4.5rem);
+  padding: clamp(4.4rem, 8vw, 7.6rem) clamp(1rem, 5vw, 4.5rem);
   background:
-    linear-gradient(180deg, #fffaf1 0%, #f5ead9 100%);
+    linear-gradient(180deg, #fffaf1 0%, #f4e8d7 100%);
 }
 
 .process-overview-grid {
   display: grid;
-  grid-template-columns: minmax(270px, .46fr) minmax(0, .92fr);
-  gap: clamp(2rem, 6vw, 5.5rem);
+  grid-template-columns: minmax(260px, .38fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5.5vw, 5rem);
   align-items: start;
 }
 
@@ -3117,8 +3104,8 @@ textarea {
 }
 
 .process-overview-card h2 {
-  max-width: 11ch;
-  font-size: clamp(2rem, 3.7vw, 4.25rem);
+  max-width: 13ch;
+  font-size: clamp(1.85rem, 2.8vw, 3.35rem);
 }
 
 .process-overview-card p:not(.eyebrow) {
@@ -3139,35 +3126,40 @@ textarea {
 }
 
 .process-steps-redesign {
-  gap: 0;
-  border-top: 1px solid rgba(74, 61, 49, .14);
+  gap: clamp(.8rem, 1.2vw, 1.1rem);
+  border-top: 0;
 }
 
 .process-steps-redesign .process-step {
-  grid-template-columns: 76px 1fr;
+  grid-template-columns: 72px 1fr;
   gap: clamp(1rem, 2.4vw, 2rem);
-  padding: clamp(1.35rem, 2.8vw, 2.4rem) clamp(.85rem, 2vw, 1.5rem);
-  background: rgba(255, 250, 241, .34);
-  border: 0;
-  border-bottom: 1px solid rgba(74, 61, 49, .14);
-  transition: background 180ms ease;
+  padding: clamp(1.25rem, 2.2vw, 1.9rem);
+  background:
+    linear-gradient(135deg, rgba(255, 250, 241, .86), rgba(250, 246, 236, .56)),
+    rgba(255, 250, 241, .48);
+  border: 1px solid rgba(74, 61, 49, .13);
+  box-shadow: 0 22px 54px rgba(74, 61, 49, .055);
+  transition: background 180ms ease, transform 180ms ease;
 }
 
 .process-steps-redesign .process-step:nth-child(even) {
-  background: rgba(232, 215, 189, .23);
+  background:
+    linear-gradient(135deg, rgba(244, 232, 215, .9), rgba(255, 250, 241, .62)),
+    rgba(232, 215, 189, .22);
 }
 
 .process-steps-redesign .process-step:hover {
-  background: rgba(255, 250, 241, .62);
+  background: rgba(255, 250, 241, .82);
+  transform: translateY(-2px);
 }
 
 .process-steps-redesign .process-step span {
   color: var(--process-oak);
-  font-size: clamp(2rem, 3vw, 3rem);
+  font-size: clamp(1.65rem, 2.4vw, 2.55rem);
 }
 
 .process-steps-redesign .process-step h3 {
-  font-size: clamp(1.75rem, 2.7vw, 3rem);
+  font-size: clamp(1.45rem, 2.2vw, 2.35rem);
 }
 
 .process-steps-redesign .process-step p {
@@ -3178,20 +3170,39 @@ textarea {
 }
 
 .process-quote {
+  min-height: clamp(430px, 58vw, 680px);
+  display: grid;
+  align-items: end;
   padding: clamp(4.4rem, 8vw, 7rem) clamp(1rem, 5vw, 4.5rem);
   background:
-    linear-gradient(90deg, rgba(47, 38, 30, .76), rgba(47, 38, 30, .25)),
-    url("assets/process-old-world-wide.jpg");
+    linear-gradient(90deg, rgba(37, 31, 26, .76), rgba(59, 46, 35, .42) 46%, rgba(59, 46, 35, .18)),
+    linear-gradient(0deg, rgba(34, 28, 24, .72), rgba(34, 28, 24, .08) 55%),
+    url("assets/process-sunday-sweep.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center 45%;
   color: var(--cream);
 }
 
 .process-quote p {
-  max-width: 21ch;
+  max-width: 24ch;
   font-family: var(--serif);
-  font-size: clamp(2.1rem, 4.7vw, 5.25rem);
-  line-height: 1.04;
+  font-size: clamp(1.85rem, 4vw, 4.65rem);
+  line-height: 1.08;
+}
+
+.process-quote p span,
+.process-quote p em {
+  display: block;
+}
+
+.process-quote p em {
+  margin-top: 1.15rem;
+  font-family: var(--sans);
+  font-size: clamp(.72rem, .9vw, .86rem);
+  font-style: normal;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(255, 250, 241, .78);
 }
 
 .process-faq-section {
@@ -3239,7 +3250,6 @@ textarea {
 
 @media (max-width: 900px) {
   .process-hero-grid,
-  .process-material-grid,
   .process-overview-grid,
   .process-faq-shell {
     grid-template-columns: 1fr;
@@ -3253,27 +3263,10 @@ textarea {
   .process-hero-photo {
     aspect-ratio: 4 / 3;
   }
-
-  .process-material-note {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0;
-  }
-
-  .process-material-note span {
-    padding: .2rem .75rem;
-    border-bottom: 0;
-    border-right: 1px solid rgba(74, 61, 49, .16);
-    text-align: center;
-  }
-
-  .process-material-note span:last-child {
-    border-right: 0;
-  }
 }
 
 @media (max-width: 620px) {
   .process-hero,
-  .process-material-band,
   .process-overview,
   .process-quote,
   .process-faq-section {
@@ -3287,7 +3280,7 @@ textarea {
   .process-steps-redesign .process-step {
     grid-template-columns: 1fr;
     gap: .45rem;
-    padding-inline: 0;
+    padding: 1.15rem;
   }
 
   .process-steps-redesign .process-step span {
@@ -3295,16 +3288,6 @@ textarea {
   }
 
   .process-quote p {
-    font-size: clamp(2rem, 10vw, 3.2rem);
-  }
-
-  .process-material-note {
-    grid-template-columns: 1fr;
-  }
-
-  .process-material-note span {
-    border-right: 0;
-    border-bottom: 1px solid rgba(74, 61, 49, .16);
-    text-align: left;
+    font-size: clamp(1.9rem, 9vw, 3.05rem);
   }
 }
