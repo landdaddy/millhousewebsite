@@ -1082,6 +1082,15 @@ h3 {
   margin-top: .8rem;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .build-page .build-hero-actions .button:hover,
+  .build-page .build-consultation-inner .button:hover {
+    border-color: var(--blue);
+    background: var(--blue);
+    color: var(--cream);
+  }
+}
+
 label {
   display: grid;
   gap: .35rem;
