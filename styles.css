@@ -178,6 +178,10 @@ h3 {
   transform: scaleX(1);
 }
 
+.nav-links a[aria-disabled="true"] {
+  cursor: default;
+}
+
 .nav-links.right {
   justify-content: flex-end;
 }
