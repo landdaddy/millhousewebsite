@@ -1657,7 +1657,7 @@ textarea {
 }
 
 .sm-latest-image img {
-  object-position: center;
+  object-position: 50% 52%;
 }
 
 .sm-latest-center {
@@ -1764,6 +1764,14 @@ textarea {
   transform: translateY(clamp(1rem, 3vw, 2rem));
 }
 
+.sm-note-photos figure:first-child img {
+  object-position: 50% 50%;
+}
+
+.sm-note-photos figure:last-child img {
+  object-position: 50% 42%;
+}
+
 .sm-quote {
   background: #e3d7c3;
   color: var(--ink);
@@ -1816,6 +1824,10 @@ textarea {
   margin: 0;
   overflow: hidden;
   aspect-ratio: .88 / 1;
+}
+
+.sm-process-editorial figure img {
+  object-position: 50% 54%;
 }
 
 .sm-process-list {
@@ -2788,6 +2800,10 @@ textarea {
   pointer-events: none;
 }
 
+.studio-oak-photo img {
+  object-position: 50% 42%;
+}
+
 .studio-oak-copy {
   display: grid;
   align-content: center;
@@ -3082,7 +3098,7 @@ textarea {
 }
 
 .process-hero-photo img {
-  object-position: 54% 56%;
+  object-position: 50% 50%;
 }
 
 .process-hero-photo::after {
@@ -3135,7 +3151,7 @@ textarea {
 }
 
 .process-card-photo img {
-  object-position: center;
+  object-position: 50% 50%;
 }
 
 .process-steps-redesign {
