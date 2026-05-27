@@ -87,13 +87,19 @@ const renderInstagramItems = (feed, items) => {
 };
 
 if (instagramFeeds.length) {
+  const hideInstagramFeeds = () => {
+    instagramFeeds.forEach((feed) => feed.closest(".instagram-section")?.classList.add("is-empty"));
+  };
   fetch("/api/instagram")
     .then((response) => response.ok ? response.json() : null)
     .then((data) => {
-      if (!data || !Array.isArray(data.items) || !data.items.length) return;
+      if (!data || !Array.isArray(data.items) || !data.items.length) {
+        hideInstagramFeeds();
+        return;
+      }
       instagramFeeds.forEach((feed) => renderInstagramItems(feed, data.items));
     })
-    .catch(() => {});
+    .catch(hideInstagramFeeds);
 }
 
 const instagramCarousels = document.querySelectorAll("[data-instagram-carousel]");

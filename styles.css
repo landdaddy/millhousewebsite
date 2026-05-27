@@ -1150,6 +1150,10 @@ textarea {
   border-top: 1px solid var(--rule);
 }
 
+.instagram-section.is-empty {
+  display: none;
+}
+
 .instagram-shell {
   display: grid;
   grid-template-columns: minmax(260px, .68fr) minmax(0, 1.32fr);
@@ -1516,9 +1520,8 @@ textarea {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(180deg, rgba(18, 18, 15, 0), rgba(18, 18, 15, .18)),
-    linear-gradient(90deg, rgba(18, 18, 15, .18), rgba(18, 18, 15, .02) 46%, rgba(18, 18, 15, .05));
+  background: transparent;
+  pointer-events: none;
 }
 
 .sm-hero-slide img {
