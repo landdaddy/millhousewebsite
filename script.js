@@ -21,11 +21,6 @@ if (menuToggle && mobileMenuPanel) {
   });
 }
 
-document.addEventListener("click", (event) => {
-  const shopPlaceholder = event.target.closest("[data-shop-placeholder]");
-  if (shopPlaceholder) event.preventDefault();
-});
-
 const revealItems = document.querySelectorAll("[data-reveal]");
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver((entries) => {
