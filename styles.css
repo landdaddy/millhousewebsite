@@ -2305,7 +2305,7 @@ textarea {
   background-image:
     linear-gradient(90deg, rgba(38, 32, 27, .74) 0%, rgba(38, 32, 27, .42) 38%, rgba(38, 32, 27, .08) 74%),
     linear-gradient(0deg, rgba(30, 25, 21, .50), rgba(30, 25, 21, .04)),
-    url("assets/studio-materials-board.jpg");
+    url("assets/generated/studio-hero-materials.png");
   background-size: cover;
   background-position: center;
   transform: scale(1.015);
@@ -2559,7 +2559,7 @@ textarea {
   padding: clamp(4rem, 8vw, 7rem) clamp(1rem, 5vw, 4.5rem);
   background:
     linear-gradient(90deg, rgba(245, 239, 229, .94), rgba(245, 239, 229, .72)),
-    url("assets/millhouse-hero-shop-objects.png");
+    url("assets/generated/studio-close-corner.png");
   background-size: cover;
   background-position: center;
 }
@@ -2945,10 +2945,8 @@ textarea {
 .studio-simple-close {
   padding: clamp(3.5rem, 7vw, 6rem) clamp(1rem, 5vw, 4.5rem);
   background:
-    linear-gradient(90deg, rgba(251, 248, 241, .96), rgba(251, 248, 241, .86)),
-    url("assets/jayla-kelley-studio-wide.jpg");
-  background-size: cover;
-  background-position: center 42%;
+    radial-gradient(circle at 18% 12%, rgba(255, 250, 242, .74), transparent 30%),
+    linear-gradient(135deg, #fbf8f1 0%, #eee3d3 100%);
 }
 
 .studio-simple-close-inner {
@@ -3193,7 +3191,7 @@ textarea {
   background:
     linear-gradient(90deg, rgba(37, 31, 26, .76), rgba(59, 46, 35, .42) 46%, rgba(59, 46, 35, .18)),
     linear-gradient(0deg, rgba(34, 28, 24, .72), rgba(34, 28, 24, .08) 55%),
-    url("assets/process-sunday-sweep.png");
+    url("assets/generated/process-quote-structure.png");
   background-size: cover;
   background-position: center 45%;
   color: var(--cream);
