@@ -1518,6 +1518,18 @@ textarea {
   background: rgba(255, 250, 242, .16);
 }
 
+@media (min-width: 621px) {
+  .sm-hero .sm-hero-action {
+    border-color: rgba(255, 250, 242, .78);
+    background: rgba(23, 50, 74, .88);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, .24);
+  }
+
+  .sm-hero .sm-hero-action:hover {
+    background: rgba(23, 50, 74, .96);
+  }
+}
+
 .sm-hero-controls {
   position: absolute;
   right: clamp(1rem, 2vw, 2rem);
