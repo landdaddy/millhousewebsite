@@ -85,30 +85,7 @@ const renderInstagramItems = (feed, items) => {
   }).join("");
 };
 
-if (instagramFeeds.length) {
-  const hideInstagramFeeds = () => {
-    instagramFeeds.forEach((feed) => feed.closest(".instagram-section")?.classList.add("is-empty"));
-  };
-  fetch("https://feeds.behold.so/NlcWDfBByUWFG2zgDyAt")
-    .then((response) => response.ok ? response.json() : null)
-    .then((posts) => {
-      if (!posts || !posts.length) {
-        hideInstagramFeeds();
-        return;
-      }
-      const items = posts.map((p) => ({
-        id: p.id,
-        caption: p.caption || "",
-        media_type: p.mediaType,
-        media_url: p.mediaUrl,
-        thumbnail_url: p.thumbnailUrl || p.mediaUrl,
-        permalink: p.permalink,
-        timestamp: p.timestamp
-      }));
-      instagramFeeds.forEach((feed) => renderInstagramItems(feed, items));
-    })
-    .catch(hideInstagramFeeds);
-}
+// Instagram feed handled by Behold widget (data-behold-id) injected per-page
 
 const instagramCarousels = document.querySelectorAll("[data-instagram-carousel]");
 instagramCarousels.forEach((feed) => {
