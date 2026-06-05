@@ -3605,7 +3605,7 @@ a[href*="behold.so"],
 @media (max-width: 960px) {
   .journal-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2.5rem 1.25rem;
+    gap: 2.5rem 1.5rem;
   }
 
   .journal-filter-label {
@@ -3613,22 +3613,22 @@ a[href*="behold.so"],
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 640px) {
   .journal-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.75rem 0.75rem;
+    grid-template-columns: 1fr;
+    gap: 3rem 0;
   }
 
   .journal-post-card figure {
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 4 / 3;
   }
 
   .journal-post-card h3 {
-    font-size: 0.9rem;
+    font-size: 1.25rem;
   }
 
   .journal-post-card .post-teaser {
-    display: none;
+    display: block;
   }
 
   .journal-filter-tab {
