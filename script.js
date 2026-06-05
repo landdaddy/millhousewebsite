@@ -115,6 +115,23 @@ instagramCarousels.forEach((feed) => {
   }, 4200);
 });
 
+// Journal category filter
+const filterTabs = document.querySelectorAll(".journal-filter-tab");
+const postCards = document.querySelectorAll(".journal-post-card");
+if (filterTabs.length && postCards.length) {
+  filterTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const category = tab.dataset.filter;
+      filterTabs.forEach((t) => { t.classList.remove("is-active"); t.setAttribute("aria-selected", "false"); });
+      tab.classList.add("is-active");
+      tab.setAttribute("aria-selected", "true");
+      postCards.forEach((card) => {
+        card.hidden = !(category === "all" || card.dataset.category === category);
+      });
+    });
+  });
+}
+
 const removeBeholdBadge = () => {
   document.querySelectorAll("behold-widget, [data-behold-id]").forEach((el) => {
     const root = el.shadowRoot || el;
