@@ -3612,3 +3612,100 @@ a[href*="behold.so"],
     padding: 0.85rem 0.9rem;
   }
 }
+
+/* ── Article Page Overrides ── */
+
+.article-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: none !important;
+  padding: 0 !important;
+  min-height: unset !important;
+  background: none !important;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  color: var(--ink);
+  margin-bottom: 1.5rem;
+  transition: opacity 0.15s;
+}
+
+.article-back:hover {
+  opacity: 1;
+  transform: none !important;
+}
+
+.article-shell h1 {
+  font-family: "Cormorant Garant", Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(2.4rem, 5vw, 4rem) !important;
+  line-height: 1.08;
+  letter-spacing: 0.01em;
+  max-width: 18ch;
+  margin-bottom: 1.5rem;
+}
+
+.article-shell .eyebrow {
+  margin-bottom: 0.5rem;
+}
+
+.article-hero {
+  aspect-ratio: 16 / 9 !important;
+  border-radius: 0;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.article-copy {
+  font-size: 1.1rem !important;
+  line-height: 1.8;
+  max-width: 680px;
+}
+
+.article-copy p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.article-copy h2 {
+  font-family: "Cormorant Garant", Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(1.5rem, 2.5vw, 2rem) !important;
+  line-height: 1.2;
+  margin-top: 2rem;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+
+.article-footer-nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+}
+
+.article-footer-nav .text-button {
+  border: none !important;
+  padding: 0 !important;
+  min-height: unset !important;
+  background: none !important;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  opacity: 0.5;
+  transition: opacity 0.15s;
+}
+
+.article-footer-nav .text-button:hover {
+  opacity: 1;
+  transform: none !important;
+}
+
+.article-copy .button {
+  margin-top: 1rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+}
