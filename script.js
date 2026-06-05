@@ -114,3 +114,12 @@ instagramCarousels.forEach((feed) => {
     if (cards.length > 1) feed.appendChild(cards[0]);
   }, 4200);
 });
+
+const removeBeholdBadge = () => {
+  document.querySelectorAll("behold-widget, [data-behold-id]").forEach((el) => {
+    const root = el.shadowRoot || el;
+    root.querySelectorAll('a[href*="behold.so"], [class*="branding"], [class*="badge"], [class*="Branding"]').forEach((badge) => badge.remove());
+  });
+};
+setTimeout(removeBeholdBadge, 800);
+setTimeout(removeBeholdBadge, 2500);
