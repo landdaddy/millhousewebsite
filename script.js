@@ -89,14 +89,23 @@ if (instagramFeeds.length) {
   const hideInstagramFeeds = () => {
     instagramFeeds.forEach((feed) => feed.closest(".instagram-section")?.classList.add("is-empty"));
   };
-  fetch("/instagram-feed.json")
+  fetch("https://feeds.behold.so/NlcWDfBByUWFG2zgDyAt")
     .then((response) => response.ok ? response.json() : null)
-    .then((data) => {
-      if (!data || !Array.isArray(data.items) || !data.items.length) {
+    .then((posts) => {
+      if (!posts || !posts.length) {
         hideInstagramFeeds();
         return;
       }
-      instagramFeeds.forEach((feed) => renderInstagramItems(feed, data.items));
+      const items = posts.map((p) => ({
+        id: p.id,
+        caption: p.caption || "",
+        media_type: p.mediaType,
+        media_url: p.mediaUrl,
+        thumbnail_url: p.thumbnailUrl || p.mediaUrl,
+        permalink: p.permalink,
+        timestamp: p.timestamp
+      }));
+      instagramFeeds.forEach((feed) => renderInstagramItems(feed, items));
     })
     .catch(hideInstagramFeeds);
 }
