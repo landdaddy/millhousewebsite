@@ -6,14 +6,14 @@
   <title>Build Your Home in Arizona | Millhouse Built</title>
   <meta name="description" content="Ready to build in Arizona? Start a conversation with Millhouse Built. Serving Gilbert, Chandler, Queen Creek, San Tan Valley, Coolidge, Florence, and Casa Grande. Call 602.901.6044.">
   <meta name="keywords" content="custom home builder Arizona, build a home Arizona, home builder Gilbert AZ, home builder Chandler AZ, home builder Queen Creek AZ, home builder San Tan Valley AZ, home builder Coolidge AZ, home builder Florence AZ, home builder Casa Grande AZ, design build Arizona">
-  <link rel="canonical" href="https://www.millhousebuilt.com/contact.html">
+  <link rel="canonical" href="https://millhousebuilt.com/contact.html">
   <meta property="og:site_name" content="Millhouse Built">
   <meta property="og:title" content="Build Your Home in Arizona | Millhouse Built">
   <meta property="og:description" content="Start a conversation with Millhouse Built. Homes in Arizona built with care, craft, and intention.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.millhousebuilt.com/contact.html">
-  <meta property="og:image" content="https://www.millhousebuilt.com/social-preview.png?v=20260520">
-  <meta property="og:image:secure_url" content="https://www.millhousebuilt.com/social-preview.png?v=20260520">
+  <meta property="og:url" content="https://millhousebuilt.com/contact.html">
+  <meta property="og:image" content="https://millhousebuilt.com/social-preview.png?v=20260520">
+  <meta property="og:image:secure_url" content="https://millhousebuilt.com/social-preview.png?v=20260520">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -21,12 +21,164 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Build Your Home in Arizona | Millhouse Built">
   <meta name="twitter:description" content="Start a conversation with Millhouse Built. Homes in Arizona built with care, craft, and intention.">
-  <meta name="twitter:image" content="https://www.millhousebuilt.com/social-preview.png?v=20260520">
+  <meta name="twitter:image" content="https://millhousebuilt.com/social-preview.png?v=20260520">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta name="theme-color" content="#fffaf2">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ── Consultation Modal ── */
+    .consult-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .consult-modal[hidden] { display: none; }
+
+    .consult-modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(20, 17, 12, 0.52);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+
+    .consult-modal-card {
+      position: relative;
+      background: #fffaf2;
+      max-width: 500px;
+      width: 100%;
+      padding: 3rem 2.75rem 2.5rem;
+      border-radius: 1px;
+      box-shadow: 0 32px 80px rgba(20, 17, 12, 0.2);
+      animation: consult-in 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    @keyframes consult-in {
+      from { opacity: 0; transform: translateY(14px) scale(0.98); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .consult-modal-close {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.2rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: inherit;
+      opacity: 0.3;
+      padding: 0.4rem;
+      line-height: 1;
+      font-size: 1.2rem;
+      transition: opacity 0.15s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .consult-modal-close:hover { opacity: 0.8; }
+
+    .consult-modal-card .eyebrow {
+      margin-bottom: 0.6rem;
+    }
+
+    .consult-modal-card h2 {
+      font-size: clamp(1.35rem, 3.5vw, 1.8rem);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .consult-modal-intro {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      opacity: 0.72;
+      margin-bottom: 1.6rem;
+    }
+
+    .consult-modal-prep {
+      background: rgba(20, 17, 12, 0.04);
+      border-left: 2px solid rgba(20, 17, 12, 0.12);
+      padding: 1.2rem 1.4rem 1.2rem 1.5rem;
+      margin-bottom: 1.25rem;
+      border-radius: 0 1px 1px 0;
+    }
+
+    .consult-modal-prep-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.45;
+      margin-bottom: 0.8rem;
+      font-weight: 500;
+    }
+
+    .consult-modal-prep ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .consult-modal-prep li {
+      font-size: 0.88rem;
+      line-height: 1.55;
+      opacity: 0.78;
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .consult-modal-prep li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      opacity: 0.4;
+    }
+
+    .consult-modal-note {
+      font-size: 0.82rem;
+      font-style: italic;
+      opacity: 0.42;
+      margin-bottom: 2rem;
+      line-height: 1.55;
+    }
+
+    .consult-modal-cta {
+      display: block;
+      text-align: center;
+      margin-bottom: 0.9rem;
+      text-decoration: none;
+    }
+
+    .consult-modal-dismiss {
+      display: block;
+      width: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 0.75rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      opacity: 0.32;
+      text-align: center;
+      padding: 0.3rem;
+      transition: opacity 0.15s;
+      font-family: inherit;
+    }
+    .consult-modal-dismiss:hover { opacity: 0.65; }
+
+    @media (max-width: 520px) {
+      .consult-modal-card {
+        padding: 2.25rem 1.5rem 2rem;
+      }
+    }
+  </style>
 </head>
 <body class="build-page">
   <header class="site-header">
@@ -51,7 +203,7 @@
           <span>Build</span>
         </div>
         <div class="build-hero-actions">
-          <a class="button" href="https://calendly.com/hunter-millhousebuilt/millhouse-meeting" target="_blank" rel="noopener">Schedule a consultation</a>
+          <a class="button js-consult-trigger" href="https://calendly.com/hunter-millhousebuilt/millhouse-meeting" target="_blank" rel="noopener">Schedule a consultation</a>
         </div>
       </div>
     </section>
@@ -120,7 +272,7 @@
         <p class="eyebrow">Consultation</p>
         <h2>Start with a conversation.</h2>
         <p>A short meeting is the cleanest way to talk through land, budget, timing, and the kind of home you are hoping to make. If it feels aligned, we will tell you the next best step.</p>
-        <a class="button" href="https://calendly.com/hunter-millhousebuilt/millhouse-meeting" target="_blank" rel="noopener">Schedule a consultation</a>
+        <a class="button js-consult-trigger" href="https://calendly.com/hunter-millhousebuilt/millhouse-meeting" target="_blank" rel="noopener">Schedule a consultation</a>
       </div>
     </section>
   </main>
@@ -160,6 +312,73 @@
     </div>
     <small>&copy; 2026 Millhouse. All rights reserved.</small>
   </footer>
+
+  <!-- Consultation modal -->
+  <div class="consult-modal" id="consult-modal" hidden role="dialog" aria-modal="true" aria-labelledby="consult-modal-title">
+    <div class="consult-modal-backdrop"></div>
+    <div class="consult-modal-card">
+      <button class="consult-modal-close" type="button" aria-label="Close">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <line x1="1" y1="1" x2="11" y2="11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="11" y1="1" x2="1" y2="11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <p class="eyebrow">Before you schedule</p>
+      <h2 id="consult-modal-title">What the first call looks like.</h2>
+      <p class="consult-modal-intro">This is a 30-minute conversation — no pressure, no pitch. We want to hear what you are thinking and tell you honestly whether the timing and fit feel right.</p>
+      <div class="consult-modal-prep">
+        <p class="consult-modal-prep-label">Good to have in mind</p>
+        <ul>
+          <li>A general area or lot you are drawn to</li>
+          <li>How you want to live — size, feel, priorities</li>
+          <li>A comfortable budget range (ballpark is fine)</li>
+          <li>Your timeline, even loosely</li>
+        </ul>
+      </div>
+      <p class="consult-modal-note">You do not need answers yet. The call is designed to help you find them.</p>
+      <a class="button consult-modal-cta" href="https://calendly.com/hunter-millhousebuilt/millhouse-meeting" target="_blank" rel="noopener">Continue to schedule</a>
+      <button class="consult-modal-dismiss" type="button">Not quite yet</button>
+    </div>
+  </div>
+
   <script src="script.js?v=20260527-images"></script>
+  <script>
+    (function () {
+      var modal = document.getElementById("consult-modal");
+      if (!modal) return;
+
+      var backdrop = modal.querySelector(".consult-modal-backdrop");
+      var closeBtn = modal.querySelector(".consult-modal-close");
+      var dismissBtn = modal.querySelector(".consult-modal-dismiss");
+
+      function openModal(e) {
+        e.preventDefault();
+        modal.hidden = false;
+        document.body.style.overflow = "hidden";
+        setTimeout(function () {
+          var cta = modal.querySelector(".consult-modal-cta");
+          if (cta) cta.focus();
+        }, 50);
+      }
+
+      function closeModal() {
+        modal.hidden = true;
+        document.body.style.overflow = "";
+      }
+
+      // Wire up all trigger buttons (but not the one inside the modal)
+      document.querySelectorAll(".js-consult-trigger").forEach(function (el) {
+        el.addEventListener("click", openModal);
+      });
+
+      backdrop && backdrop.addEventListener("click", closeModal);
+      closeBtn && closeBtn.addEventListener("click", closeModal);
+      dismissBtn && dismissBtn.addEventListener("click", closeModal);
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && !modal.hidden) closeModal();
+      });
+    })();
+  </script>
 </body>
 </html>

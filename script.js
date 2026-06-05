@@ -1,4 +1,3 @@
-
 const menuToggle = document.querySelector(".menu-toggle");
 const mobileMenuPanel = document.querySelector(".mobile-menu-panel");
 if (menuToggle && mobileMenuPanel) {
@@ -90,7 +89,7 @@ if (instagramFeeds.length) {
   const hideInstagramFeeds = () => {
     instagramFeeds.forEach((feed) => feed.closest(".instagram-section")?.classList.add("is-empty"));
   };
-  fetch("/api/instagram")
+  fetch("/instagram-feed.json")
     .then((response) => response.ok ? response.json() : null)
     .then((data) => {
       if (!data || !Array.isArray(data.items) || !data.items.length) {
