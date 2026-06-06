@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&family=Playfair+Display:wght@400;500&family=Cormorant+Garant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@400;500&family=Cormorant+Garant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap");
 
 :root {
   --paper: #f6f0e7;
@@ -3574,9 +3574,9 @@ a[href*="behold.so"],
 
 .journal-post-card h3 {
   font-family: "DM Sans", var(--sans);
-  font-size: clamp(1.875rem, 2.5vw, 2rem);
+  font-size: clamp(2rem, 3vw, 2.25rem);
   font-weight: 400;
-  line-height: 1.1;
+  line-height: 1.08;
   letter-spacing: -0.02em;
   margin-bottom: 0.55rem;
   transition: opacity 0.15s;
@@ -3626,9 +3626,9 @@ a[href*="behold.so"],
 
   .journal-post-card h3 {
     order: 1;
-    font-size: 1.875rem;
+    font-size: 2rem;
     font-weight: 400;
-    line-height: 1.1;
+    line-height: 1.08;
     margin-bottom: 0.35rem;
   }
 
