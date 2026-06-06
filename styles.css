@@ -3595,10 +3595,10 @@ a[href*="behold.so"],
 }
 
 .journal-post-card .post-meta {
-  font-size: 0.58rem;
+  font-size: 0.68rem;
   letter-spacing: 0.13em;
   text-transform: uppercase;
-  opacity: 0.4;
+  opacity: 0.5;
   margin-top: auto;
 }
 
@@ -3626,8 +3626,9 @@ a[href*="behold.so"],
 
   .journal-post-card h3 {
     order: 1;
-    font-size: 1.4rem;
-    line-height: 1.12;
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 1.1;
     margin-bottom: 0.35rem;
   }
 
