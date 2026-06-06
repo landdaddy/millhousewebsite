@@ -3643,7 +3643,7 @@ a[href*="behold.so"],
 
   .journal-post-card figure {
     order: 10;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 3 / 4;
     margin: 1.25rem 0 0;
   }
 
