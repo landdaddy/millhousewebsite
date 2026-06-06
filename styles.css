@@ -1568,12 +1568,13 @@ textarea {
   color: #fffaf2;
   background: transparent;
   border: none;
-  border-top: 1.5px solid rgba(255, 250, 242, .75);
-  border-bottom: 1.5px solid rgba(255, 250, 242, .75);
+  border-top: 2px solid rgba(255, 250, 242, 1);
+  border-bottom: 2px solid rgba(255, 250, 242, 1);
   border-radius: 0;
   padding: .45rem .1rem;
   backdrop-filter: none;
   box-shadow: none;
+  text-shadow: 0 1px 8px rgba(20, 15, 10, .5);
 }
 
 .sm-hero .sm-hero-action::after {
