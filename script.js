@@ -50,7 +50,9 @@ if (heroCarousel && heroAction) {
     slides.forEach((slide, slideIndex) => slide.classList.toggle("is-active", slideIndex === currentSlide));
     heroDots.forEach((dot, dotIndex) => dot.classList.toggle("is-active", dotIndex === currentSlide));
     const active = slides[currentSlide];
-    heroAction.textContent = active.dataset.buttonText || "Build";
+    const heroLabel = heroAction.querySelector("[data-hero-label]");
+    if (heroLabel) heroLabel.textContent = active.dataset.buttonText || "Build";
+    else heroAction.textContent = active.dataset.buttonText || "Build";
     heroAction.href = active.dataset.buttonLink || "contact.html";
   };
 
