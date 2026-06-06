@@ -453,7 +453,7 @@ h3 {
 .sm-read-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.8rem 2.2rem;
+  gap: 2.4rem 2rem;
 }
 
 .sm-read-list a {
@@ -467,8 +467,9 @@ h3 {
 .sm-read-list img {
   display: block;
   width: 100%;
-  aspect-ratio: 1;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
+  object-position: center;
   margin-bottom: .9rem;
 }
 
