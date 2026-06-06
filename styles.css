@@ -3616,19 +3616,35 @@ a[href*="behold.so"],
 @media (max-width: 640px) {
   .journal-grid {
     grid-template-columns: 1fr;
-    gap: 3rem 0;
+    gap: 2.75rem 0;
   }
 
-  .journal-post-card figure {
-    aspect-ratio: 4 / 3;
+  /* Text before image — Studio McGee format */
+  .journal-post-card > a {
+    flex-direction: column;
   }
 
   .journal-post-card h3 {
-    font-size: 1.25rem;
+    order: 1;
+    font-size: 1.4rem;
+    line-height: 1.12;
+    margin-bottom: 0.35rem;
   }
 
   .journal-post-card .post-teaser {
+    order: 2;
     display: block;
+  }
+
+  .journal-post-card .post-meta {
+    order: 3;
+    margin-top: 0.35rem;
+  }
+
+  .journal-post-card figure {
+    order: 10;
+    aspect-ratio: 1 / 1;
+    margin: 1.25rem 0 0;
   }
 
   .journal-filter-tab {
@@ -3788,8 +3804,8 @@ a[href*="behold.so"],
   }
 
   .article-hero {
-    margin: 0.75rem -1.25rem 2rem;
-    aspect-ratio: 4 / 3 !important;
+    margin: 0.75rem -1.25rem 2.5rem;
+    aspect-ratio: 3 / 4 !important;
   }
 
   .article-copy {
