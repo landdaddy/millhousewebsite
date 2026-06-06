@@ -548,11 +548,11 @@ h3 {
   overflow: hidden;
   background:
     repeating-linear-gradient(
-      -45deg,
+      90deg,
       transparent,
-      transparent 9px,
-      rgba(49, 47, 42, .045) 9px,
-      rgba(49, 47, 42, .045) 10px
+      transparent 38px,
+      rgba(49, 47, 42, .04) 38px,
+      rgba(49, 47, 42, .04) 39px
     ),
     #efe6d8;
   color: var(--ink);

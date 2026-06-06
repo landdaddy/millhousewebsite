@@ -26,6 +26,20 @@ cd ~/Documents/Codex/millhousewebsite && git add -A && git commit -m "descriptio
 ```
 Vercel picks it up in ~60 seconds. Hard refresh with Cmd+Shift+R to see changes.
 
+## ⚠️ CRITICAL: Git rules for Claude (Cowork/sandbox)
+**Claude's sandbox bash mounts this repo folder directly.** Any git command run from the sandbox (even `git status` or `git log`) corrupts the local `.git/index` file. This causes every subsequent `git add <file>` to delete all other tracked files.
+
+**Claude must NEVER run git commands from sandbox bash.** No exceptions.
+- ✅ Claude edits files using Read/Write/Edit tools
+- ✅ Hunter runs all git commands from Terminal
+- ❌ Never: `mcp__workspace__bash` with any `git` command
+
+**Recovery if index gets corrupted** (site goes 404):
+```bash
+cd ~/Documents/Codex/millhousewebsite && git add -A && git commit -m "Restore all site files" && git push
+```
+This always works because all files exist on disk — git just re-tracks them.
+
 ## Site structure
 ```
 index.html          — Homepage (hero carousel, journal grid, process steps, Instagram)
