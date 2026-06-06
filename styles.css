@@ -1551,12 +1551,13 @@ textarea {
 }
 
 .sm-hero-slide .sm-hero-copy .eyebrow {
-  color: rgba(255, 250, 242, .92);
+  color: var(--ink);
   margin-bottom: .85rem;
   display: inline-block;
-  background: rgba(255, 250, 242, .18);
+  background: rgba(255, 250, 242, .62);
   padding: .28rem .75rem;
   border-radius: 3px;
+  backdrop-filter: blur(6px);
 }
 
 .sm-hero .sm-hero-action {
@@ -1566,25 +1567,26 @@ textarea {
   z-index: 3;
   min-width: 176px;
   border-color: rgba(255, 250, 242, .9);
-  background: rgba(255, 250, 242, .22);
-  color: #fffaf2;
+  background: rgba(255, 250, 242, .55);
+  color: var(--ink);
   backdrop-filter: blur(10px);
 }
 
 .sm-hero .sm-hero-action:hover {
   transform: translateY(-2px);
-  background: rgba(255, 250, 242, .32);
+  background: rgba(255, 250, 242, .72);
 }
 
 @media (min-width: 621px) {
   .sm-hero .sm-hero-action {
     border-color: rgba(255, 250, 242, .92);
-    background: rgba(255, 250, 242, .26);
+    background: rgba(255, 250, 242, .58);
+    color: var(--ink);
     box-shadow: 0 10px 28px rgba(0, 0, 0, .2);
   }
 
   .sm-hero .sm-hero-action:hover {
-    background: rgba(255, 250, 242, .38);
+    background: rgba(255, 250, 242, .75);
   }
 }
 
