@@ -3120,57 +3120,67 @@ a[href*="behold.so"],
 }
 
 .process-hero {
-  padding: clamp(3.7rem, 7vw, 6.8rem) clamp(1rem, 5vw, 4.5rem);
+  padding: clamp(4rem, 8vw, 7.5rem) clamp(1rem, 5vw, 4.5rem);
   background:
     linear-gradient(180deg, rgba(255, 250, 241, .88), rgba(250, 246, 236, .98)),
     repeating-linear-gradient(90deg, rgba(167, 125, 82, .12) 0 1px, transparent 1px 38px),
     var(--process-paper);
   border-bottom: 1px solid rgba(49, 47, 42, .12);
+  text-align: center;
 }
 
-.process-hero-grid {
-  display: grid;
-  grid-template-columns: minmax(290px, .72fr) minmax(340px, .86fr);
-  gap: clamp(2rem, 7vw, 7rem);
+.process-hero-inner {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-.process-hero-copy {
+.process-hero-inner h1 {
+  font-size: clamp(2.6rem, 5.2vw, 5.4rem);
+  max-width: 18ch;
+  margin: .5rem 0 0;
+  font-weight: 400;
+}
+
+.process-hero-stats {
   display: grid;
-  justify-items: start;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  max-width: 660px;
+  margin-top: clamp(2rem, 4vw, 3rem);
+  border-top: 1px solid rgba(49, 47, 42, .14);
+  padding-top: clamp(1.2rem, 2.5vw, 1.8rem);
 }
 
-.process-hero-copy h1 {
-  max-width: 11.5ch;
-  font-size: clamp(2.55rem, 4.9vw, 5.35rem);
+.process-hero-stat {
+  border-right: 1px solid rgba(49, 47, 42, .1);
+  padding: .25rem 1.2rem;
 }
 
-.process-hero-copy p:not(.eyebrow) {
-  max-width: 34rem;
-  margin: 1.25rem 0 1.8rem;
-  color: #665d52;
-  font-size: clamp(1rem, 1.22vw, 1.15rem);
-  line-height: 1.82;
+.process-hero-stat:first-child {
+  padding-left: 0;
 }
 
-.process-hero-photo {
-  position: relative;
-  aspect-ratio: 4 / 5;
-  margin: 0;
-  overflow: hidden;
-  background: var(--process-warm);
+.process-hero-stat:last-child {
+  border-right: none;
+  padding-right: 0;
 }
 
-.process-hero-photo img {
-  object-position: 50% 50%;
+.process-stat-n {
+  font-family: "Cormorant Garant", Georgia, serif;
+  font-size: clamp(1.9rem, 3.2vw, 2.7rem);
+  color: var(--ink);
+  display: block;
+  line-height: 1;
 }
 
-.process-hero-photo::after {
-  content: "";
-  position: absolute;
-  inset: clamp(.8rem, 1.35vw, 1.15rem);
-  border: 1px solid rgba(255, 250, 241, .74);
-  pointer-events: none;
+.process-stat-l {
+  font-size: 11px;
+  letter-spacing: .03em;
+  color: var(--muted);
+  display: block;
+  margin-top: .3rem;
+  line-height: 1.45;
 }
 
 .process-overview {
@@ -3338,7 +3348,6 @@ a[href*="behold.so"],
 }
 
 @media (max-width: 900px) {
-  .process-hero-grid,
   .process-overview-grid,
   .process-faq-shell {
     grid-template-columns: 1fr;
@@ -3347,10 +3356,6 @@ a[href*="behold.so"],
   .process-overview-card,
   .process-faq-heading {
     position: static;
-  }
-
-  .process-hero-photo {
-    aspect-ratio: 4 / 3;
   }
 }
 
@@ -3362,8 +3367,13 @@ a[href*="behold.so"],
     padding-inline: 1rem;
   }
 
-  .process-hero-copy h1 {
-    font-size: clamp(2.3rem, 11vw, 3.6rem);
+  .process-hero-stats {
+    max-width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .process-hero-stat {
+    padding: .25rem .5rem;
   }
 
   .process-steps-redesign .process-step {
@@ -4037,14 +4047,6 @@ a[href*="behold.so"],
 
 /* ── Process (field-notes) page: mobile ── */
 @media (max-width: 620px) {
-  .process-hero-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  .process-hero-photo {
-    display: none;
-  }
-
   .faq-list details summary {
     font-size: 0.95rem;
     padding: 1rem 0;
