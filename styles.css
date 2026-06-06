@@ -1933,8 +1933,40 @@ textarea {
 
 .sm-process-list {
   display: grid;
-  border-top: 1px solid var(--rule);
 }
+
+/* Override global data-reveal — container is invisible anchor, children animate */
+.sm-process-list[data-reveal] {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+/* Rule line — starts collapsed, draws left to right */
+.process-rule {
+  height: 1px;
+  background: var(--rule);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.55s ease;
+}
+
+/* Articles start invisible */
+.sm-process-list article {
+  opacity: 0;
+  transition: opacity 0.42s ease;
+}
+
+/* Stagger: rule draws, then article fades in behind it */
+.sm-process-list.is-visible > :nth-child(1) { transition-delay: 0s; }
+.sm-process-list.is-visible > :nth-child(2) { transition-delay: 0.44s; }
+.sm-process-list.is-visible > :nth-child(3) { transition-delay: 0.22s; }
+.sm-process-list.is-visible > :nth-child(4) { transition-delay: 0.64s; }
+.sm-process-list.is-visible > :nth-child(5) { transition-delay: 0.44s; }
+.sm-process-list.is-visible > :nth-child(6) { transition-delay: 0.84s; }
+
+.sm-process-list.is-visible .process-rule { transform: scaleX(1); }
+.sm-process-list.is-visible article { opacity: 1; }
 
 .sm-process-list article {
   display: grid;
