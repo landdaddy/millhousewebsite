@@ -3779,18 +3779,6 @@ a[href*="behold.so"],
   .journal-grid-section {
     padding: 1.75rem 0.85rem 3rem;
   }
-
-  .journal-grid {
-    gap: 1.25rem 0.65rem;
-  }
-
-  .journal-post-card h3 {
-    font-size: 0.95rem;
-  }
-
-  .journal-post-card .post-meta {
-    font-size: 0.55rem;
-  }
 }
 
 /* ── Article pages: tighter and more readable on mobile ── */
