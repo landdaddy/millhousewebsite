@@ -1704,7 +1704,7 @@ textarea {
 
 .sm-who-drop {
   display: flex;
-  gap: .7rem;
+  gap: .15rem;
   align-items: flex-start;
   margin-bottom: 1.4rem;
 }
