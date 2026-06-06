@@ -320,8 +320,8 @@ h3 {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(255, 250, 242, .06), rgba(255, 250, 242, .52)),
-    linear-gradient(90deg, rgba(255, 250, 242, .16), rgba(255, 250, 242, .02) 48%, rgba(255, 250, 242, .2));
+    linear-gradient(to top, rgba(20, 15, 10, .48) 0%, transparent 50%),
+    linear-gradient(to right, rgba(20, 15, 10, .22) 0%, transparent 55%);
 }
 
 .sm-hero-image img {
