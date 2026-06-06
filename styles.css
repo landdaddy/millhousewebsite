@@ -457,16 +457,15 @@ h3 {
 }
 
 .sm-read-list a {
-  display: grid;
-  grid-template-rows: auto auto auto auto;
-  align-items: start;
-  gap: 0;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
 }
 
 .sm-read-list img {
   display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   object-position: center;
